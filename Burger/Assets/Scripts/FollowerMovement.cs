@@ -20,7 +20,7 @@ public class FollowerMovement : MonoBehaviour
     {
         if (Vector2.Distance(destination.position, transform.position) > maxDistance)
         {
-            rb.AddForce(movement * moveSpeed * Time.fixedDeltaTime, ForceMode2D.Impulse);
+            rb.MovePosition((Vector2)transform.position + movement * moveSpeed * Time.fixedDeltaTime);
         }
     }
 
