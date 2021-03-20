@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
     //    }
     //}
 
+    private Dialogsystem dialogsystem;
 
     public UnityEvent OverworldGSEvent;
     public UnityEvent DialogGSEvent;
@@ -76,6 +77,8 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        dialogsystem = GetComponent<Dialogsystem>();
+
         OverworldGSEvent.AddListener(() =>
         {
             currentGameState = GameState.Overworld;
