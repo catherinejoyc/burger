@@ -8,7 +8,7 @@ public class EnemyTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            //change dialog texts
+            GetComponent<Dialog>().enabled = true;
 
             GameManager.Instance.DialogGSEvent.Invoke();
         }
