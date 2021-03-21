@@ -44,12 +44,18 @@ TagManager:
   - name: floor
     uniqueID: 1588852221
     locked: 0
+  - name: water
+    uniqueID: 1199539031
+    locked: 0
+  - name: wall 3
+    uniqueID: 2188025655
+    locked: 0
   - name: wall 2
     uniqueID: 567313587
     locked: 0
   - name: wall 1
     uniqueID: 3719487505
     locked: 0
-  - name: light
+  - name: player
     uniqueID: 1221835931
     locked: 0
