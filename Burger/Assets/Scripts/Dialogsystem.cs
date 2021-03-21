@@ -5,33 +5,46 @@ using UnityEngine.UI;
 
 public class Dialogsystem : MonoBehaviour
 {
+    public static Dialogsystem instance;
+
+    [SerializeField]
+    private GameObject dialogPanel;
     [SerializeField]
     private Text dialog;
-    Coroutine speaking = null;
-    public bool isSpeaking
+    public Image face;
+
+    public bool isSpeaking {get{return speaking != null;}}
+    [HideInInspector] public bool isWaitingForUserInput = false;
+
+    private void Awake()
     {
-        get
-        {
-            return speaking != null;
-        }
+        instance = this;
     }
+
     public void Say(string speech)
     {
         StopSpeaking();
-
         speaking = StartCoroutine(Speaking(speech));
     }
+
+    Coroutine speaking = null;
     IEnumerator Speaking(string speech)
     {
+        dialogPanel.SetActive(true);
         dialog.text = "";
+        isWaitingForUserInput = false;
 
         while (dialog.text != speech)
         {
             dialog.text += speech[dialog.text.Length];
             yield return new WaitForFixedUpdate();
         }
-        
-        yield return new WaitForSeconds(3);
+
+        isWaitingForUserInput = true;
+        while(isWaitingForUserInput)
+        {
+            yield return new WaitForFixedUpdate();
+        }
 
         StopSpeaking();
     }
