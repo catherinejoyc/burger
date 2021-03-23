@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Dialog : MonoBehaviour
 {
+    GameManager gameManager;
     Dialogsystem dialogSystem;
 
     [SerializeField]
@@ -15,23 +16,22 @@ public class Dialog : MonoBehaviour
 
     private void Start()
     {
+        gameManager = GameManager.Instance;
         dialogSystem = Dialogsystem.instance;
         dialogSystem.face.sprite = face;
         Say(dialog[index]);
         ++index;
-
-
     }
 
     private void Update()
     {
-        if (Input.anyKeyDown)
+        if (Input.anyKeyDown && gameManager.CurrentGameState == GameState.Dialog)
         {
             if (!dialogSystem.isSpeaking || dialogSystem.isWaitingForUserInput)
             {
                 if (index >= dialog.Length)
                 {
-                    GameManager.Instance.FightTransGSEvent.Invoke();
+                    gameManager.FightTransGSEvent.Invoke();
                     return;
                 }
 

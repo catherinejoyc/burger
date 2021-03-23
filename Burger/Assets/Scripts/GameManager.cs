@@ -9,7 +9,8 @@ public enum GameState
     Dialog,
     FightTransition,
     Fight,
-    WinLoseTransition
+    WinTransition,
+    LoseTransition
 }
 
 public class GameManager : MonoBehaviour
@@ -35,32 +36,7 @@ public class GameManager : MonoBehaviour
     }
 
     private GameState currentGameState;
-    //public GameState CurrentGameState
-    //{
-    //    get
-    //    {
-    //        return currentGameState;
-    //    }
-    //    set
-    //    {
-    //        switch (value)
-    //        {
-    //            case GameState.Overworld:
-    //                break;
-    //            case GameState.Dialog:
-    //                break;
-    //            case GameState.FightTransition:
-    //                break;
-    //            case GameState.Fight:
-    //                break;
-    //            case GameState.WinLoseTransition:
-    //                break;
-    //            default:
-    //                Debug.LogError("Trying to set to invalid Game State!");
-    //                break;
-    //        }
-    //    }
-    //}
+    public GameState CurrentGameState { get { return currentGameState; } }
 
     private Dialogsystem dialogsystem;
 
@@ -68,7 +44,8 @@ public class GameManager : MonoBehaviour
     public UnityEvent DialogGSEvent;
     public UnityEvent FightTransGSEvent;
     public UnityEvent FightGSEvent;
-    public UnityEvent WLTransGSEvent;
+    public UnityEvent WinTransGSEvent;
+    public UnityEvent LoseTransGSEvent;
 
     private void Awake()
     {
@@ -95,9 +72,13 @@ public class GameManager : MonoBehaviour
         {
             currentGameState = GameState.Fight;
         });
-        WLTransGSEvent.AddListener(() =>
+        WinTransGSEvent.AddListener(() =>
         {
-            currentGameState = GameState.WinLoseTransition;
+            currentGameState = GameState.WinTransition;
+        });
+        LoseTransGSEvent.AddListener(() =>
+        {
+            currentGameState = GameState.LoseTransition;
         });
     }
 
