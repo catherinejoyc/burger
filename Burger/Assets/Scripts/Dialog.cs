@@ -7,6 +7,7 @@ public class Dialog : MonoBehaviour
     GameManager gameManager;
     Dialogsystem dialogSystem;
 
+    [TextArea(minLines: 2, maxLines: 4)]
     [SerializeField]
     private string[] dialog;
     [SerializeField]

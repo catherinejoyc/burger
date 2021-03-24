@@ -38,14 +38,18 @@ public class GameManager : MonoBehaviour
     private GameState currentGameState;
     public GameState CurrentGameState { get { return currentGameState; } }
 
-    private Dialogsystem dialogsystem;
-
+    [Header("Game States")]
     public UnityEvent OverworldGSEvent;
     public UnityEvent DialogGSEvent;
     public UnityEvent FightTransGSEvent;
     public UnityEvent FightGSEvent;
     public UnityEvent WinTransGSEvent;
     public UnityEvent LoseTransGSEvent;
+
+    [Header("BattleSystem")]
+    Battlesystem battleSystem;
+    public Battlesystem BattleSystem { get { return battleSystem; } }
+
 
     private void Awake()
     {
@@ -54,7 +58,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        dialogsystem = GetComponent<Dialogsystem>();
+        battleSystem = GetComponent<Battlesystem>();
 
         OverworldGSEvent.AddListener(() =>
         {
@@ -80,10 +84,5 @@ public class GameManager : MonoBehaviour
         {
             currentGameState = GameState.LoseTransition;
         });
-    }
-
-    void Update()
-    {
-        
     }
 }
