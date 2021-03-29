@@ -59,6 +59,9 @@ TagManager:
   - name: light
     uniqueID: 1495210655
     locked: 0
+  - name: objects
+    uniqueID: 826633807
+    locked: 0
   - name: player
     uniqueID: 1221835931
     locked: 0
