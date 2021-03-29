@@ -14,14 +14,16 @@ public class Battlesystem : MonoBehaviour
 
     [SerializeField] Transform enemyBattleStation;
     [SerializeField] GameObject fightBox;
+    public EnemyBattle enemy;
+    public PlayerBattle player;
 
     private BattleState currentBattleState;
 
-    public void PrepareBattle(GameObject enemyUIPref)
+    public void PrepareBattle(GameObject _enemyUIPref, PlayerBattle _player)
     {
-        Instantiate(enemyUIPref, enemyBattleStation);
-
-        //playerTurn
+        Instantiate(_enemyUIPref, enemyBattleStation);
+        enemy = _enemyUIPref.GetComponent<EnemyBattle>();
+        player = _player;
         UpdatePlayerTurn();
     }
 

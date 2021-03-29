@@ -7,6 +7,7 @@ public class EnemyTrigger : MonoBehaviour
     GameManager gameManager;
     [SerializeField] GameObject enemyUIPrefab;
     Battlesystem battleSystem;
+    PlayerBattle player;
 
     private void Start()
     {
@@ -19,17 +20,17 @@ public class EnemyTrigger : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             GetComponent<Dialog>().enabled = true;
-
+            player = collision.GetComponent<PlayerBattle>();
             gameManager.WinTransGSEvent.AddListener(DeactivateEnemy);
-            gameManager.FightGSEvent.AddListener(PrepareEnemyUI);
+            gameManager.FightGSEvent.AddListener(PrepareUI);
             gameManager.DialogGSEvent.Invoke();
         }
     }
 
-    void PrepareEnemyUI()
+    void PrepareUI()
     {
-        battleSystem.PrepareBattle(enemyUIPrefab);
-        gameManager.FightGSEvent.RemoveListener(PrepareEnemyUI);
+        battleSystem.PrepareBattle(enemyUIPrefab, player);
+        gameManager.FightGSEvent.RemoveListener(PrepareUI);
     }
 
     void DeactivateEnemy()
