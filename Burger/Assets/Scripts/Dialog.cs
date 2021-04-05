@@ -33,6 +33,7 @@ public class Dialog : MonoBehaviour
                 if (index >= dialog.Length)
                 {
                     gameManager.FightTransGSEvent.Invoke();
+                    GetComponent<EnemyBattle>().enabled = true;
                     return;
                 }
 
