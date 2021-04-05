@@ -7,7 +7,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     Rigidbody2D rb;
     Vector2 movement;
-    bool isMoving = true;
+
+    GameManager gameManager;
 
     void SetMovementVector()
     {
@@ -26,30 +27,21 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
-    void StartMoving()
-    {
-        isMoving = true;
-    }
-    void StopMoving()
-    {
-        isMoving = false;
-    }
-
     void Start()
     {
+        gameManager = GameManager.Instance;
         rb = GetComponent<Rigidbody2D>();
-        GameManager.Instance.OverworldGSEvent.AddListener(StartMoving);
-        GameManager.Instance.DialogGSEvent.AddListener(StopMoving);
     }
     void Update()
     {
-        if (isMoving)
+        if (gameManager.currentGameState == GameState.Overworld)
             SetMovementVector();
         else
             SetMovementToZero();
     }
     private void FixedUpdate()
     {
-        Move();
+        if (gameManager.currentGameState == GameState.Overworld)
+            Move();
     }
 }

@@ -6,37 +6,38 @@ using UnityEngine.UI;
 public enum BattleState
 {
     PlayerTurn, 
-    EnemyTurn //Attack, Animation, Health update (gradual reduction)
+    EnemyTurn, //Attack, Animation, Health update (gradual reduction)
+    Won,
+    Lost
 }
 
 public class Battlesystem : MonoBehaviour
 {
+    public GameObject FightPanel;
+    public BattleState currentBattleState;
 
-    [SerializeField] Transform enemyBattleStation;
-    [SerializeField] GameObject fightBox;
-    public EnemyBattle enemy;
-    public PlayerBattle player;
+    public Slider enemyHP;
+    public Slider playerHP;
 
-    private BattleState currentBattleState;
+    public Unit player;
+    public Unit enemy;
 
-    public void PrepareBattle(GameObject _enemyUIPref, PlayerBattle _player)
+    public void SetUp(Unit en)
     {
-        Instantiate(_enemyUIPref, enemyBattleStation);
-        enemy = _enemyUIPref.GetComponent<EnemyBattle>();
-        player = _player;
-        UpdatePlayerTurn();
+        enemy = en;
+
+        enemyHP.maxValue = enemy.maxHP;
+        enemyHP.value = enemy.currentHP;
     }
 
-    void UpdatePlayerTurn()
+    public void PlayerAttack()
     {
-        currentBattleState = BattleState.PlayerTurn;
-        fightBox.SetActive(true);
+        enemy.TakeDamage(player.damage);
+        enemyHP.value = enemy.currentHP;
     }
 
-    void UpdateEnemyTurn()
+    void EnemyAttack()
     {
-        currentBattleState = BattleState.EnemyTurn;
-        //EnemyFightScript
-        //  choose random character, animation, damage (gradual reduction)
+
     }
 }

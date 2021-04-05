@@ -26,14 +26,14 @@ public class Dialog : MonoBehaviour
 
     private void Update()
     {
-        if (Input.anyKeyDown && gameManager.CurrentGameState == GameState.Dialog)
+        if (Input.anyKeyDown && gameManager.currentGameState == GameState.Dialog)
         {
             if (!dialogSystem.isSpeaking || dialogSystem.isWaitingForUserInput)
             {
                 if (index >= dialog.Length)
                 {
-                    gameManager.FightTransGSEvent.Invoke();
-                    GetComponent<EnemyBattle>().enabled = true;
+                    GetComponent<EnemyTrigger>().ActivateFight();
+                    dialogSystem.dialogPanel.SetActive(false);
                     return;
                 }
 

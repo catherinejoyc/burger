@@ -7,10 +7,8 @@ public enum GameState
 {
     Overworld,
     Dialog,
-    FightTransition,
+    Transition,
     Fight,
-    WinTransition,
-    LoseTransition
 }
 
 public class GameManager : MonoBehaviour
@@ -35,21 +33,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private GameState currentGameState;
-    public GameState CurrentGameState { get { return currentGameState; } }
+    public GameState currentGameState;
 
-    [Header("Game States")]
-    public UnityEvent OverworldGSEvent;
-    public UnityEvent DialogGSEvent;
-    public UnityEvent FightTransGSEvent;
-    public UnityEvent FightGSEvent;
-    public UnityEvent WinTransGSEvent;
-    public UnityEvent LoseTransGSEvent;
-
-    [Header("BattleSystem")]
-    Battlesystem battleSystem;
-    public Battlesystem BattleSystem { get { return battleSystem; } }
-
+    public Battlesystem battleSystem;
 
     private void Awake()
     {
@@ -58,31 +44,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        currentGameState = GameState.Overworld;
         battleSystem = GetComponent<Battlesystem>();
-
-        OverworldGSEvent.AddListener(() =>
-        {
-            currentGameState = GameState.Overworld;
-        });
-        DialogGSEvent.AddListener(() =>
-        {
-            currentGameState = GameState.Dialog;
-        });
-        FightTransGSEvent.AddListener(() =>
-        {
-            currentGameState = GameState.FightTransition;
-        });
-        FightGSEvent.AddListener(() =>
-        {
-            currentGameState = GameState.Fight;
-        });
-        WinTransGSEvent.AddListener(() =>
-        {
-            currentGameState = GameState.WinTransition;
-        });
-        LoseTransGSEvent.AddListener(() =>
-        {
-            currentGameState = GameState.LoseTransition;
-        });
     }
 }

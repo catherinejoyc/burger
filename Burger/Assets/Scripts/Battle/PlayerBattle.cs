@@ -13,7 +13,6 @@ public class PlayerBattle : MonoBehaviour
     {
         //animate playerSprite
         //reduce enemy health by attack points (gradual reduction)
-        enemy.TakeDamage(vDamage);
     }
 
     public void DoraAttack(EnemyBattle enemy)
