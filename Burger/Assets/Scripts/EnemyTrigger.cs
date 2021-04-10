@@ -22,8 +22,10 @@ public class EnemyTrigger : MonoBehaviour
 
     public void ActivateFight()
     {
+        //Music stoppen, neue Music
+
         gameManager.currentGameState = GameState.Fight;
-        gameManager.battleSystem.FightPanel.SetActive(true);
+        gameManager.battleSystem.fightPanel.SetActive(true);
         gameManager.battleSystem.SetUp(GetComponent<Unit>());
     }
 }

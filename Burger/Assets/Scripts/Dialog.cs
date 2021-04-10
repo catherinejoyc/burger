@@ -32,6 +32,9 @@ public class Dialog : MonoBehaviour
             {
                 if (index >= dialog.Length)
                 {
+                    //transition statt fight
+                    //Music stoppen, neue Music
+
                     GetComponent<EnemyTrigger>().ActivateFight();
                     dialogSystem.dialogPanel.SetActive(false);
                     return;
