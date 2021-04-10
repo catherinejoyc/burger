@@ -31,6 +31,15 @@ public class Battlesystem : MonoBehaviour
     {
         currentBattleState = BattleState.PlayerTurn;
 
+        viktoriaHP.maxValue = viktoria.maxHP;
+        viktoriaHP.value = viktoria.currentHP;
+
+        tamaraHP.maxValue = tamara.maxHP;
+        tamaraHP.value = tamara.currentHP;
+
+        doraHP.maxValue = dora.maxHP;
+        doraHP.value = dora.currentHP;
+
         enemy = en;
         //*place enemy prefab on position
 
@@ -42,6 +51,10 @@ public class Battlesystem : MonoBehaviour
     {
         currentBattleState = BattleState.EnemyTurn;
         fightBox.SetActive(false);
+
+        //attack animation
+        EnemyAttack();
+        UpdatePlayerTurn();
     }
 
     void UpdatePlayerTurn()
@@ -97,6 +110,5 @@ public class Battlesystem : MonoBehaviour
 
         //player turn
         currentBattleState = BattleState.PlayerTurn;
-
     }
 }
