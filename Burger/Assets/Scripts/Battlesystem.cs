@@ -13,31 +13,90 @@ public enum BattleState
 
 public class Battlesystem : MonoBehaviour
 {
-    public GameObject FightPanel;
+    public GameObject fightPanel;
+    public GameObject fightBox;
     public BattleState currentBattleState;
 
     public Slider enemyHP;
-    public Slider playerHP;
+    public Slider viktoriaHP;
+    public Slider tamaraHP;
+    public Slider doraHP;
 
-    public Unit player;
+    public Unit viktoria;
+    public Unit tamara;
+    public Unit dora;
     public Unit enemy;
 
     public void SetUp(Unit en)
     {
+        currentBattleState = BattleState.PlayerTurn;
+
         enemy = en;
+        //*place enemy prefab on position
 
         enemyHP.maxValue = enemy.maxHP;
         enemyHP.value = enemy.currentHP;
     }
 
-    public void PlayerAttack()
+    void UpdateEnemyTurn()
     {
-        enemy.TakeDamage(player.damage);
+        currentBattleState = BattleState.EnemyTurn;
+        fightBox.SetActive(false);
+    }
+
+    void UpdatePlayerTurn()
+    {
+        currentBattleState = BattleState.PlayerTurn;
+        fightBox.SetActive(true);
+
+    }
+
+    public void VikAttack()
+    {
+        enemy.TakeDamage(viktoria.damage);
         enemyHP.value = enemy.currentHP;
+
+        UpdateEnemyTurn();
+    }
+
+    public void TamAttack()
+    {
+        enemy.TakeDamage(tamara.damage);
+        enemyHP.value = enemy.currentHP;
+
+        UpdateEnemyTurn();
+    }
+
+    public void DorAttack()
+    {
+        enemy.TakeDamage(dora.damage);
+        enemyHP.value = enemy.currentHP;
+
+        UpdateEnemyTurn();
     }
 
     void EnemyAttack()
     {
+        int i = Random.Range(0, 2);
+
+        switch (i)
+        {
+            case 0:
+                viktoria.TakeDamage(enemy.damage);
+                viktoriaHP.value = viktoria.currentHP;
+                break;
+            case 1:
+                tamara.TakeDamage(enemy.damage);
+                tamaraHP.value = tamara.currentHP;
+                break;
+            case 2:
+                dora.TakeDamage(enemy.damage);
+                doraHP.value = dora.currentHP;
+                break;
+        }
+
+        //player turn
+        currentBattleState = BattleState.PlayerTurn;
 
     }
 }
