@@ -34,6 +34,7 @@ public class Dialog : MonoBehaviour
                 {
                     //transition statt fight
                     //Music stoppen, neue Music
+                    AudioManager.Instance.PlayFightClip();
 
                     GetComponent<EnemyTrigger>().ActivateFight();
                     dialogSystem.dialogPanel.SetActive(false);

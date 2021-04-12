@@ -6033,6 +6033,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 650800170}
+  - component: {fileID: 650800169}
   - component: {fileID: 650800168}
   m_Layer: 0
   m_Name: AudioSource
@@ -6051,15 +6052,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b48ef66bae2d0954e85bcef171865ac5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fb7e16a26ad07c14297c8072fc4a6225, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.176
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 126
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -6137,6 +6138,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &650800169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650800167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1d0e515ad585e444bf3966584238b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioSrc: {fileID: 650800168}
+  FightClip: {fileID: 8300000, guid: 0bd911888d546e54aa0b50530b03e1d7, type: 3}
 --- !u!4 &650800170
 Transform:
   m_ObjectHideFlags: 0
