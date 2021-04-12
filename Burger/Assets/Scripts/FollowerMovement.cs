@@ -10,6 +10,8 @@ public class FollowerMovement : MonoBehaviour
     Rigidbody2D rb;
     Vector2 movement;
 
+    GameManager gameManager;
+
     void SetMovementVector()
     {
         Vector2 direction = destination.position - transform.position;
@@ -25,18 +27,20 @@ public class FollowerMovement : MonoBehaviour
         }
     }
 
-
     void Start()
     {
+        gameManager = GameManager.Instance;
         rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        SetMovementVector();
+        if (gameManager.currentGameState == GameState.Overworld)
+            SetMovementVector();
     }
     private void FixedUpdate()
     {
-        Move(movement);
+        if (gameManager.currentGameState == GameState.Overworld)
+            Move(movement);
     }
 }

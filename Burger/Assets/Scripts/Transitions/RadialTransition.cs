@@ -22,7 +22,5 @@ public class RadialTransition : MonoBehaviour
             blackImage.fillAmount += 0.01f;
             yield return new WaitForFixedUpdate();
         }
-
-        GameManager.Instance.FightGSEvent.Invoke();
     }
 }

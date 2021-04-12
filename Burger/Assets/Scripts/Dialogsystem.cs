@@ -7,8 +7,7 @@ public class Dialogsystem : MonoBehaviour
 {
     public static Dialogsystem instance;
 
-    [SerializeField]
-    private GameObject dialogPanel;
+    public GameObject dialogPanel;
     [SerializeField]
     private Text dialog;
     public Image face;
