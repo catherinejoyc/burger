@@ -2,21 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class StartMenu : MonoBehaviour
 {
+    public GameObject startmenu;
+    public GameObject credits;
+
+    private void Start()
+    {
+        credits.SetActive(false);
+    }
     public void StartGame()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(2); 
     }
 
     public void StartCredits()
     {
-        SceneManager.LoadScene(3);
+        startmenu.SetActive(false);
+        credits.SetActive(true);
     }
     
     public void BackToMenu()
     {
-        SceneManager.LoadScene(1);
+        credits.SetActive(false);
+        startmenu.SetActive(true);
     }
 }

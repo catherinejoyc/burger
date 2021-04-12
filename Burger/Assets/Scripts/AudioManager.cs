@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioSource AudioSrc;
+    public AudioSource audioSrc;
     public AudioClip FightClip;
+    public AudioClip FullClip;
+    public AudioClip OverworldClip;
+    private float musicVolume = 1f;
 
     private static AudioManager instance;
     public static AudioManager Instance
@@ -26,9 +30,42 @@ public class AudioManager : MonoBehaviour
             }
         }
     }
+    void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+        
+    }
+
+    private void Start()
+    {
+        audioSrc = GetComponent<AudioSource>();
+    }
+    private void Update()
+    {
+        audioSrc.volume = musicVolume;
+        if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            PlayOverworldClip();
+        }
+    }
 
     public void PlayFightClip()
     {
-        AudioSrc.clip = FightClip;
+        audioSrc.clip = FightClip;
+    }
+
+    public void PlayFullClip()
+    {
+        audioSrc.clip = FullClip;
+    }
+
+    public void PlayOverworldClip()
+    {
+        audioSrc.clip = OverworldClip;
+    }
+
+    public void SetVolume(float vol)
+    {
+        musicVolume = vol;
     }
 }
