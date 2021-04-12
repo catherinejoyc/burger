@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public enum BattleState
@@ -15,6 +16,9 @@ public class Battlesystem : MonoBehaviour
 {
     public GameObject fightPanel;
     public GameObject fightBox;
+    public Button vikButton;
+    public Button tamButton;
+    public Button dorButton;
     public BattleState currentBattleState;
 
     public Slider enemyHP;
@@ -66,49 +70,140 @@ public class Battlesystem : MonoBehaviour
 
     public void VikAttack()
     {
-        enemy.TakeDamage(viktoria.damage);
+        bool gameOver = enemy.TakeDamage(viktoria.damage);
+        //gradual reduction
         enemyHP.value = enemy.currentHP;
+
+        if (gameOver)
+        {
+            Win();
+        }
 
         UpdateEnemyTurn();
     }
 
     public void TamAttack()
     {
-        enemy.TakeDamage(tamara.damage);
+        bool gameOver = enemy.TakeDamage(tamara.damage);
+        //gradual reduction
         enemyHP.value = enemy.currentHP;
+
+        if (gameOver)
+        {
+            Win();
+        }
 
         UpdateEnemyTurn();
     }
 
     public void DorAttack()
     {
-        enemy.TakeDamage(dora.damage);
+        bool gameOver = enemy.TakeDamage(dora.damage);
+        //gradual reduction
         enemyHP.value = enemy.currentHP;
+
+        if (gameOver)
+        {
+            Win();
+        }
 
         UpdateEnemyTurn();
     }
 
     void EnemyAttack()
     {
-        int i = Random.Range(0, 2);
+        int chosenPlayerNr = ChoosePlayer();
 
-        switch (i)
+        switch (chosenPlayerNr)
         {
             case 0:
-                viktoria.TakeDamage(enemy.damage);
+                bool gameOver = viktoria.TakeDamage(enemy.damage);
+                //gradual reduction
                 viktoriaHP.value = viktoria.currentHP;
+
+                if (gameOver)
+                {
+                    //kill Vik
+                    vikButton.interactable = false;
+                }
                 break;
             case 1:
-                tamara.TakeDamage(enemy.damage);
+                bool gameOver1 = tamara.TakeDamage(enemy.damage);
+                //gradual reduction
                 tamaraHP.value = tamara.currentHP;
+
+                if (gameOver1)
+                {
+                    //kill Tamara
+                    tamButton.interactable = false;
+                }
                 break;
             case 2:
-                dora.TakeDamage(enemy.damage);
+                bool gameOver2 = dora.TakeDamage(enemy.damage);
+                //gradual reduction
                 doraHP.value = dora.currentHP;
+
+                if (gameOver2)
+                {
+                    //kill dora
+                    dorButton.interactable = false;
+                }
                 break;
         }
 
+
+        if (!vikButton.interactable && !tamButton.interactable && !dorButton.interactable)
+        {
+            //die
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
         //player turn
-        currentBattleState = BattleState.PlayerTurn;
+        UpdatePlayerTurn();
+    }
+
+    void Win()
+    {
+        enemy.gameObject.SetActive(false);
+        fightPanel.SetActive(false);
+
+        GameManager.Instance.currentGameState = GameState.Overworld;
+    }
+
+    int ChoosePlayer()
+    {
+        bool playerChoosable = false;
+
+        while (!playerChoosable)
+        {
+            int i = Random.Range(0, 3);
+
+            switch (i)
+            {
+                case 0:
+                    if (vikButton.interactable)
+                    {
+                        playerChoosable = true;
+                        return 0;
+                    }
+                    break;
+                case 1:
+                    if (tamButton.interactable)
+                    {
+                        playerChoosable = true;
+                        return 1;
+                    }
+                    break;
+                case 2:
+                    if (dorButton.interactable)
+                    {
+                        playerChoosable = true;
+                        return 2;
+                    }
+                    break;
+            }
+        }
+
+        return 3;
     }
 }
