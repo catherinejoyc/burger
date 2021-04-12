@@ -62,11 +62,14 @@ TagManager:
   - name: stairs
     uniqueID: 1071862007
     locked: 0
+  - name: stairs 2
+    uniqueID: 1656161313
+    locked: 0
   - name: gradient
     uniqueID: 2813940897
     locked: 0
-  - name: stairs 2
-    uniqueID: 1656161313
+  - name: stairwall
+    uniqueID: 3065083473
     locked: 0
   - name: objects
     uniqueID: 826633807
