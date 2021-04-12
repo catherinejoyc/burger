@@ -8,6 +8,9 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     Vector2 movement;
 
+    public Animator animator;
+    //public Animation anim;
+
     GameManager gameManager;
 
     void SetMovementVector()
@@ -29,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        //anim = gameObject.GetComponent<Animation>();
         gameManager = GameManager.Instance;
         rb = GetComponent<Rigidbody2D>();
     }
@@ -38,6 +42,26 @@ public class PlayerMovement : MonoBehaviour
             SetMovementVector();
         else
             SetMovementToZero();
+
+        animator.SetFloat("horizontal", movement.x);
+        animator.SetFloat("vertical", movement.y);
+        animator.SetFloat("speed", movement.sqrMagnitude);
+
+        //if (movement.x > 0)
+        //{
+        //    anim.Play("Viktoria_WalkRight");
+        //    Debug.Log("WalkRight");
+        //}
+        //if (movement.x < 0)
+        //{
+        //    anim.Play("Viktoria_WalkLeft");
+        //    Debug.Log("WalkLeft");
+        //}
+        //if (movement.x == 0)
+        //{
+        //    anim.Play("Viktoria_Idle");
+        //    Debug.Log("Idle");
+        //}
     }
     private void FixedUpdate()
     {

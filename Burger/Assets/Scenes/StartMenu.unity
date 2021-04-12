@@ -426,9 +426,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2000754130}
+      - m_Target: {fileID: 2000754135}
         m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: BackToMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1635,6 +1635,7 @@ MonoBehaviour:
   FightClip: {fileID: 8300000, guid: b48ef66bae2d0954e85bcef171865ac5, type: 3}
   FullClip: {fileID: 8300000, guid: b48ef66bae2d0954e85bcef171865ac5, type: 3}
   OverworldClip: {fileID: 8300000, guid: fb7e16a26ad07c14297c8072fc4a6225, type: 3}
+  overworld: 0
 --- !u!82 &1938696663
 AudioSource:
   m_ObjectHideFlags: 0
