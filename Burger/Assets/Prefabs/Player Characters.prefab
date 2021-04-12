@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1221835931
-  m_SortingLayer: 8
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -130,7 +130,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6615435060934109888}
   - component: {fileID: 6615435060934109759}
-  - component: {fileID: 6615435060934109757}
   - component: {fileID: 444402291}
   m_Layer: 0
   m_Name: Main Camera
@@ -196,14 +195,6 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &6615435060934109757
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6615435060934109756}
-  m_Enabled: 1
 --- !u!114 &444402291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,7 +303,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1221835931
-  m_SortingLayer: 8
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8811be77627808946b2691eee4129099, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -339,7 +330,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   animator: {fileID: 3324527005033229500}
-  anim: {fileID: 0}
 --- !u!50 &6615435061002516954
 Rigidbody2D:
   serializedVersion: 4
@@ -540,7 +530,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1221835931
-  m_SortingLayer: 8
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
