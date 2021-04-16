@@ -62,7 +62,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayFullClip()
     {
-        audioSrc.clip = FullClip;
+        audioSrc.clip = FightClip;
     }
 
     public void PlayOverworldClip()
