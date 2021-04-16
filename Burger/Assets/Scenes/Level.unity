@@ -8881,6 +8881,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7432653862917854789, guid: bb997a329c865dd42b34f3e7c288c5f1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7432653862917854791, guid: bb997a329c865dd42b34f3e7c288c5f1,
         type: 3}
       propertyPath: m_RootOrder
@@ -18388,7 +18393,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1686107741
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22998,12 +23003,12 @@ PrefabInstance:
     - target: {fileID: 6615435061311348091, guid: 813c211594e75184ca6f322fb7ba6c22,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.44
+      value: -1.92
       objectReference: {fileID: 0}
     - target: {fileID: 6615435061311348091, guid: 813c211594e75184ca6f322fb7ba6c22,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.66
+      value: -1.84
       objectReference: {fileID: 0}
     - target: {fileID: 6615435061311348091, guid: 813c211594e75184ca6f322fb7ba6c22,
         type: 3}

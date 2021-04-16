@@ -8,10 +8,12 @@ public class StartMenu : MonoBehaviour
 {
     public GameObject startmenu;
     public GameObject credits;
+    public GameObject chooseCharacter;
 
     private void Start()
     {
         credits.SetActive(false);
+        chooseCharacter.SetActive(false);
     }
     public void StartGame()
     {
@@ -28,5 +30,11 @@ public class StartMenu : MonoBehaviour
     {
         credits.SetActive(false);
         startmenu.SetActive(true);
+    }
+
+    public void StartChooseCharacter()
+    {
+        startmenu.SetActive(false);
+        chooseCharacter.SetActive(true);
     }
 }
