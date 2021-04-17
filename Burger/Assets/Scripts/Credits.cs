@@ -16,6 +16,6 @@ public class Credits : MonoBehaviour
 
     private void Completed(object sender, AsyncCompletedEventArgs e)
     {
-        print("Download completed!");
+        print("Download completed! -");
     }
 }
