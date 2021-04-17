@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     public GameState currentGameState;
 
     public Battlesystem battleSystem;
+    public RadialTransition radialTrans;
 
     private void Awake()
     {
