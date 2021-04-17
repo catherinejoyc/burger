@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6615435060121664773}
   - component: {fileID: 6615435060121664772}
   - component: {fileID: 6615435060121664771}
+  - component: {fileID: 843472068}
   m_Layer: 0
   m_Name: Follower1
   m_TagString: Player
@@ -120,6 +121,21 @@ MonoBehaviour:
   destination: {fileID: 6615435061002516953}
   moveSpeed: 2
   maxDistance: 2
+--- !u!114 &843472068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6615435060121664770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a959f40651b7a534cae8eb0dcc6231ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 20
+  currentHP: 20
+  damage: 5
 --- !u!1 &6615435060934109756
 GameObject:
   m_ObjectHideFlags: 0
@@ -471,6 +487,7 @@ GameObject:
   - component: {fileID: 6615435061336536543}
   - component: {fileID: 6615435061336536542}
   - component: {fileID: 6615435061336536541}
+  - component: {fileID: 1802405526}
   m_Layer: 0
   m_Name: Follower2
   m_TagString: Player
@@ -579,3 +596,18 @@ MonoBehaviour:
   destination: {fileID: 6615435060121664774}
   moveSpeed: 2
   maxDistance: 2
+--- !u!114 &1802405526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6615435061336536540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a959f40651b7a534cae8eb0dcc6231ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 20
+  currentHP: 20
+  damage: 5
