@@ -22862,30 +22862,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6615435060121664770, guid: 813c211594e75184ca6f322fb7ba6c22,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615435061002516953, guid: 813c211594e75184ca6f322fb7ba6c22,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615435061002516953, guid: 813c211594e75184ca6f322fb7ba6c22,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6615435061311348090, guid: 813c211594e75184ca6f322fb7ba6c22,
         type: 3}
       propertyPath: m_Name
       value: Player Characters
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615435061311348090, guid: 813c211594e75184ca6f322fb7ba6c22,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6615435061311348091, guid: 813c211594e75184ca6f322fb7ba6c22,
         type: 3}
@@ -22940,11 +22920,6 @@ PrefabInstance:
     - target: {fileID: 6615435061311348091, guid: 813c211594e75184ca6f322fb7ba6c22,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6615435061336536540, guid: 813c211594e75184ca6f322fb7ba6c22,
-        type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
