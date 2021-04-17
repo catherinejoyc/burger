@@ -428,8 +428,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.38}
-  m_Size: {x: 3.31, y: 6.7}
+  m_Offset: {x: 0, y: 0.54}
+  m_Size: {x: 2.51, y: 6.01}
   m_Direction: 0
 --- !u!1001 &46895876
 PrefabInstance:
@@ -3369,7 +3369,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.81}
-  m_Size: {x: 2.73, y: 4.87}
+  m_Size: {x: 2.52, y: 4.87}
   m_Direction: 0
 --- !u!1001 &291593683
 PrefabInstance:
@@ -4295,7 +4295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 336148943}
   m_Layer: 0
-  m_Name: Level
+  m_Name: LevelTiles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8006,8 +8006,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.38}
-  m_Size: {x: 3.31, y: 6.7}
+  m_Offset: {x: 0, y: 0.54}
+  m_Size: {x: 2.51, y: 6.01}
   m_Direction: 0
 --- !u!4 &675289633 stripped
 Transform:
@@ -9595,7 +9595,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.81}
-  m_Size: {x: 2.73, y: 4.87}
+  m_Size: {x: 2.52, y: 4.87}
   m_Direction: 0
 --- !u!212 &765096088
 SpriteRenderer:
@@ -10285,7 +10285,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.81}
-  m_Size: {x: 2.73, y: 4.87}
+  m_Size: {x: 2.52, y: 4.87}
   m_Direction: 0
 --- !u!1001 &821575573
 PrefabInstance:
@@ -10606,8 +10606,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.38}
-  m_Size: {x: 3.31, y: 6.7}
+  m_Offset: {x: 0, y: 0.54}
+  m_Size: {x: 2.51, y: 6.01}
   m_Direction: 0
 --- !u!1 &842284064
 GameObject:
@@ -10966,7 +10966,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.81}
-  m_Size: {x: 2.73, y: 4.87}
+  m_Size: {x: 2.52, y: 4.87}
   m_Direction: 0
 --- !u!1 &849498219
 GameObject:
@@ -11555,8 +11555,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.38}
-  m_Size: {x: 3.31, y: 6.7}
+  m_Offset: {x: 0, y: 0.54}
+  m_Size: {x: 2.51, y: 6.01}
   m_Direction: 0
 --- !u!1 &940859903
 GameObject:
@@ -11822,7 +11822,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.81}
-  m_Size: {x: 2.73, y: 4.87}
+  m_Size: {x: 2.52, y: 4.87}
   m_Direction: 0
 --- !u!1001 &968465472
 PrefabInstance:
@@ -13257,8 +13257,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.38}
-  m_Size: {x: 3.31, y: 6.7}
+  m_Offset: {x: 0, y: 0.54}
+  m_Size: {x: 2.51, y: 6.01}
   m_Direction: 0
 --- !u!4 &1090711055 stripped
 Transform:
@@ -15415,7 +15415,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.81}
-  m_Size: {x: 2.73, y: 4.87}
+  m_Size: {x: 2.52, y: 4.87}
   m_Direction: 0
 --- !u!1 &1400604122
 GameObject:
@@ -15666,8 +15666,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.38}
-  m_Size: {x: 3.31, y: 6.7}
+  m_Offset: {x: 0, y: 0.54}
+  m_Size: {x: 2.51, y: 6.01}
   m_Direction: 0
 --- !u!1 &1422803804
 GameObject:
@@ -15959,8 +15959,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.38}
-  m_Size: {x: 3.31, y: 6.7}
+  m_Offset: {x: 0, y: 0.54}
+  m_Size: {x: 2.51, y: 6.01}
   m_Direction: 0
 --- !u!4 &1440334382 stripped
 Transform:
@@ -16278,7 +16278,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.81}
-  m_Size: {x: 2.73, y: 4.87}
+  m_Size: {x: 2.52, y: 4.87}
   m_Direction: 0
 --- !u!212 &1504231374
 SpriteRenderer:
@@ -18479,7 +18479,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.81}
-  m_Size: {x: 2.73, y: 4.87}
+  m_Size: {x: 2.52, y: 4.87}
   m_Direction: 0
 --- !u!4 &1686044458 stripped
 Transform:
@@ -19216,8 +19216,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.38}
-  m_Size: {x: 3.31, y: 6.7}
+  m_Offset: {x: 0, y: 0.54}
+  m_Size: {x: 2.51, y: 6.01}
   m_Direction: 0
 --- !u!1 &1758948435
 GameObject:
@@ -19768,8 +19768,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.38}
-  m_Size: {x: 3.31, y: 6.7}
+  m_Offset: {x: 0, y: 0.54}
+  m_Size: {x: 2.51, y: 6.01}
   m_Direction: 0
 --- !u!1 &1800842202
 GameObject:
@@ -23153,12 +23153,12 @@ PrefabInstance:
     - target: {fileID: 6615435061311348091, guid: 813c211594e75184ca6f322fb7ba6c22,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.04
+      value: -4.89
       objectReference: {fileID: 0}
     - target: {fileID: 6615435061311348091, guid: 813c211594e75184ca6f322fb7ba6c22,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.25
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 6615435061311348091, guid: 813c211594e75184ca6f322fb7ba6c22,
         type: 3}
