@@ -9,7 +9,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip FightClip;
     public AudioClip FullClip;
     public AudioClip OverworldClip;
-    private float musicVolume = 0.5f;
+    private float musicVolume = 0.1f;
     public bool overworld = false;
     public bool fightscene = false;
 
