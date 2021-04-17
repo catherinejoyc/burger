@@ -1969,6 +1969,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentGameState: 3
   battleSystem: {fileID: 2147030895253864247}
+  radialTrans: {fileID: 2147030896112641438}
+  blendTrans: {fileID: 2147030896112641441}
 --- !u!114 &2147030895253864244
 MonoBehaviour:
   m_ObjectHideFlags: 0
