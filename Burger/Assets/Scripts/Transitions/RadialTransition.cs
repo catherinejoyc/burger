@@ -7,6 +7,7 @@ public class RadialTransition : MonoBehaviour
 {
     [SerializeField]
     private Image blackImage;
+    bool transitionIsActive = false;
     GameManager gameManager;
 
     private void Start()
@@ -16,11 +17,15 @@ public class RadialTransition : MonoBehaviour
 
     public void StartTransition()
     {
-        StartCoroutine(Transition());
+        if (!transitionIsActive)
+        {
+            StartCoroutine(Transition());           
+        }        
     }
 
     IEnumerator Transition()
     {
+        transitionIsActive = true;
         blackImage.fillAmount = 0;
 
         while (blackImage.fillAmount < 1)
@@ -52,5 +57,7 @@ public class RadialTransition : MonoBehaviour
             blackImage.color = new Color(0, 0, 0, alpha);
             yield return new WaitForFixedUpdate();
         }
+
+        transitionIsActive = false;
     }
 }

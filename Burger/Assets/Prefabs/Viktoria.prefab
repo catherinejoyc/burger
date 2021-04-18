@@ -7,10 +7,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 843472068, guid: 813c211594e75184ca6f322fb7ba6c22, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1802405526, guid: 813c211594e75184ca6f322fb7ba6c22, type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615435060121664770, guid: 813c211594e75184ca6f322fb7ba6c22,
+        type: 3}
+      propertyPath: m_Name
+      value: Tam
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615435060121664770, guid: 813c211594e75184ca6f322fb7ba6c22,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615435061002516950, guid: 813c211594e75184ca6f322fb7ba6c22,
+        type: 3}
+      propertyPath: m_Name
+      value: Vik
+      objectReference: {fileID: 0}
     - target: {fileID: 6615435061311348090, guid: 813c211594e75184ca6f322fb7ba6c22,
         type: 3}
       propertyPath: m_Name
-      value: Player Characters
+      value: Viktoria
       objectReference: {fileID: 0}
     - target: {fileID: 6615435061311348091, guid: 813c211594e75184ca6f322fb7ba6c22,
         type: 3}
@@ -20,12 +43,12 @@ PrefabInstance:
     - target: {fileID: 6615435061311348091, guid: 813c211594e75184ca6f322fb7ba6c22,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.666
       objectReference: {fileID: 0}
     - target: {fileID: 6615435061311348091, guid: 813c211594e75184ca6f322fb7ba6c22,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.827
       objectReference: {fileID: 0}
     - target: {fileID: 6615435061311348091, guid: 813c211594e75184ca6f322fb7ba6c22,
         type: 3}
@@ -67,5 +90,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6615435061336536540, guid: 813c211594e75184ca6f322fb7ba6c22,
+        type: 3}
+      propertyPath: m_Name
+      value: Dor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615435061336536540, guid: 813c211594e75184ca6f322fb7ba6c22,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7583074204328013679, guid: 813c211594e75184ca6f322fb7ba6c22,
+        type: 3}
+      propertyPath: damage
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6615435060121664773, guid: 813c211594e75184ca6f322fb7ba6c22, type: 3}
+    - {fileID: 6615435060121664772, guid: 813c211594e75184ca6f322fb7ba6c22, type: 3}
+    - {fileID: 6615435060121664771, guid: 813c211594e75184ca6f322fb7ba6c22, type: 3}
+    - {fileID: 6615435061336536543, guid: 813c211594e75184ca6f322fb7ba6c22, type: 3}
+    - {fileID: 6615435061336536542, guid: 813c211594e75184ca6f322fb7ba6c22, type: 3}
+    - {fileID: 6615435061336536541, guid: 813c211594e75184ca6f322fb7ba6c22, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 813c211594e75184ca6f322fb7ba6c22, type: 3}
