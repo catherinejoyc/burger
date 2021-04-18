@@ -7,6 +7,27 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3781384065745768713, guid: 501aef55ec1f5b24682dd3a12cb916ff,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 48ba372ced81d0c40b91f1b01fd4cd49, type: 2}
+    - target: {fileID: 4726391833726518381, guid: 501aef55ec1f5b24682dd3a12cb916ff,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8d9d7d2b15db21d4589bff1c5521a59c,
+        type: 3}
+    - target: {fileID: 4726391833726518382, guid: 501aef55ec1f5b24682dd3a12cb916ff,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 4726391833726518382, guid: 501aef55ec1f5b24682dd3a12cb916ff,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 5.12
+      objectReference: {fileID: 0}
     - target: {fileID: 4726391834069901518, guid: 501aef55ec1f5b24682dd3a12cb916ff,
         type: 3}
       propertyPath: m_RootOrder
@@ -65,7 +86,7 @@ PrefabInstance:
     - target: {fileID: 4726391834069901519, guid: 501aef55ec1f5b24682dd3a12cb916ff,
         type: 3}
       propertyPath: m_Name
-      value: Tamara
+      value: Dora
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 501aef55ec1f5b24682dd3a12cb916ff, type: 3}
