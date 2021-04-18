@@ -5937,12 +5937,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2147030894110466844, guid: e8e5d899bd8a14b4c85d8002eb5ff17f,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: 0ad41966469364b4da8854d6c408903c,
-        type: 3}
     - target: {fileID: 2147030894624795741, guid: e8e5d899bd8a14b4c85d8002eb5ff17f,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -5957,11 +5951,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2147030895121842138, guid: e8e5d899bd8a14b4c85d8002eb5ff17f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2147030895253864243, guid: e8e5d899bd8a14b4c85d8002eb5ff17f,
         type: 3}
@@ -6027,22 +6016,17 @@ PrefabInstance:
         type: 3}
       propertyPath: dora
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2147030895253864247, guid: e8e5d899bd8a14b4c85d8002eb5ff17f,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1538803327}
     - target: {fileID: 2147030895253864247, guid: e8e5d899bd8a14b4c85d8002eb5ff17f,
         type: 3}
       propertyPath: tamara
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1538803328}
     - target: {fileID: 2147030895253864247, guid: e8e5d899bd8a14b4c85d8002eb5ff17f,
         type: 3}
       propertyPath: viktoria
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1538803329}
     - target: {fileID: 2147030895266507942, guid: e8e5d899bd8a14b4c85d8002eb5ff17f,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -6052,26 +6036,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2147030895559254745, guid: e8e5d899bd8a14b4c85d8002eb5ff17f,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 434.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 2147030895639840741, guid: e8e5d899bd8a14b4c85d8002eb5ff17f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2147030895702406470, guid: e8e5d899bd8a14b4c85d8002eb5ff17f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2147030895893285053, guid: e8e5d899bd8a14b4c85d8002eb5ff17f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2147030895926600932, guid: e8e5d899bd8a14b4c85d8002eb5ff17f,
         type: 3}
@@ -17033,11 +16997,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Viktoria
       objectReference: {fileID: 0}
-    - target: {fileID: 6635403058382230784, guid: 424109c953637314ea80f40d43eac575,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6635403058382230785, guid: 424109c953637314ea80f40d43eac575,
         type: 3}
       propertyPath: m_RootOrder
@@ -17095,6 +17054,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 424109c953637314ea80f40d43eac575, type: 3}
+--- !u!114 &1538803327 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 566064663555985132, guid: 424109c953637314ea80f40d43eac575,
+    type: 3}
+  m_PrefabInstance: {fileID: 1538803326}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a959f40651b7a534cae8eb0dcc6231ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1538803328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 566064662329627838, guid: 424109c953637314ea80f40d43eac575,
+    type: 3}
+  m_PrefabInstance: {fileID: 1538803326}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a959f40651b7a534cae8eb0dcc6231ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1538803329 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7991475911670064917, guid: 424109c953637314ea80f40d43eac575,
+    type: 3}
+  m_PrefabInstance: {fileID: 1538803326}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a959f40651b7a534cae8eb0dcc6231ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1540889776
 GameObject:
   m_ObjectHideFlags: 0
@@ -23168,6 +23163,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Softdrink
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967771532494661951, guid: c01b953149f84a94582221dde9aa700b,
+        type: 3}
+      propertyPath: maxHP
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967771532494661951, guid: c01b953149f84a94582221dde9aa700b,
+        type: 3}
+      propertyPath: currentHP
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c01b953149f84a94582221dde9aa700b, type: 3}
