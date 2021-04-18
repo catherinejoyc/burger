@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/TamScene.unity
+    guid: ee8b55a0158522e48b7f63ed2d995d56
+  - enabled: 1
+    path: Assets/Scenes/DorScene.unity
+    guid: cacc0e887b7c6514d9f05762bd20b847
   m_configObjects: {}
