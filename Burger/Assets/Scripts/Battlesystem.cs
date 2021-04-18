@@ -31,6 +31,11 @@ public class Battlesystem : MonoBehaviour
     public Unit dora;
     public Unit enemy;
 
+    [Header("UI Animators")]
+    public Animator vikAnim;
+    public Animator dorAnim;
+    public Animator tamAnim;
+
     public void SetUp(Unit en)
     {
         currentBattleState = BattleState.PlayerTurn;
@@ -71,6 +76,8 @@ public class Battlesystem : MonoBehaviour
     public void VikAttack()
     {
         bool gameOver = enemy.TakeDamage(viktoria.damage);
+        vikAnim.SetTrigger("attack");
+
         //gradual reduction
         enemyHP.value = enemy.currentHP;
 
@@ -85,6 +92,8 @@ public class Battlesystem : MonoBehaviour
     public void TamAttack()
     {
         bool gameOver = enemy.TakeDamage(tamara.damage);
+        tamAnim.SetTrigger("attack");
+
         //gradual reduction
         enemyHP.value = enemy.currentHP;
 
@@ -99,6 +108,8 @@ public class Battlesystem : MonoBehaviour
     public void DorAttack()
     {
         bool gameOver = enemy.TakeDamage(dora.damage);
+        dorAnim.SetTrigger("attack");
+
         //gradual reduction
         enemyHP.value = enemy.currentHP;
 
