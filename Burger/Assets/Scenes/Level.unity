@@ -15217,12 +15217,12 @@ SpriteRenderer:
   m_SortingLayerID: 826633807
   m_SortingLayer: 11
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 11d4db80cd2cd154496e1ccc7531c6c4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0b32a6522a1e85f49894ce5b4084a792, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.4, y: 0.5}
+  m_Size: {x: 1.87, y: 1.815}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -23544,20 +23544,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2967771532494661892, guid: c01b953149f84a94582221dde9aa700b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967771532494661892, guid: c01b953149f84a94582221dde9aa700b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 3.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967771532494661892, guid: c01b953149f84a94582221dde9aa700b,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 88d7e231ee31b514aaf378debfa89e97,
+        type: 3}
+    - target: {fileID: 2967771532494661892, guid: c01b953149f84a94582221dde9aa700b,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2967771532494661894, guid: c01b953149f84a94582221dde9aa700b,
         type: 3}
       propertyPath: m_Name
       value: Softdrink
-      objectReference: {fileID: 0}
-    - target: {fileID: 2967771532494661951, guid: c01b953149f84a94582221dde9aa700b,
-        type: 3}
-      propertyPath: maxHP
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2967771532494661951, guid: c01b953149f84a94582221dde9aa700b,
-        type: 3}
-      propertyPath: currentHP
-      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c01b953149f84a94582221dde9aa700b, type: 3}
