@@ -1472,12 +1472,12 @@ PrefabInstance:
     - target: {fileID: 2967771532494661891, guid: c01b953149f84a94582221dde9aa700b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.634241
+      value: -4.79
       objectReference: {fileID: 0}
     - target: {fileID: 2967771532494661891, guid: c01b953149f84a94582221dde9aa700b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.7580614
+      value: -2.56
       objectReference: {fileID: 0}
     - target: {fileID: 2967771532494661891, guid: c01b953149f84a94582221dde9aa700b,
         type: 3}
@@ -2242,7 +2242,7 @@ SpriteRenderer:
   m_Size: {x: 0.4, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &204835304
@@ -15938,9 +15938,17 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 800640064, guid: e8e5d899bd8a14b4c85d8002eb5ff17f, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1128638720, guid: e8e5d899bd8a14b4c85d8002eb5ff17f, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555099191, guid: e8e5d899bd8a14b4c85d8002eb5ff17f, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2147030894624795741, guid: e8e5d899bd8a14b4c85d8002eb5ff17f,
         type: 3}
