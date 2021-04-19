@@ -19,6 +19,7 @@ public class Battlesystem : MonoBehaviour
     public Button vikButton;
     public Button tamButton;
     public Button dorButton;
+    public Transform enemyPos;
     public BattleState currentBattleState;
 
     public Slider enemyHP;
@@ -35,8 +36,9 @@ public class Battlesystem : MonoBehaviour
     public Animator vikAnim;
     public Animator dorAnim;
     public Animator tamAnim;
+    Animator enemyAnim;
 
-    public void SetUp(Unit en)
+    public void SetUp(Unit en, GameObject enemyUIPref)
     {
         currentBattleState = BattleState.PlayerTurn;
 
@@ -49,11 +51,13 @@ public class Battlesystem : MonoBehaviour
         doraHP.maxValue = dora.maxHP;
         doraHP.value = dora.currentHP;
 
-        enemy = en;
-        //*place enemy prefab on position
+        GameObject enemyPref = Instantiate(enemyUIPref, enemyPos);
 
-        enemyHP.maxValue = enemy.maxHP;
-        enemyHP.value = enemy.currentHP;
+        enemyHP.maxValue = en.maxHP;
+        enemyHP.value = en.currentHP;
+
+        enemy = en;
+        enemyAnim = enemyPref.GetComponent<Animator>();
     }
 
     void UpdateEnemyTurn()
@@ -63,7 +67,6 @@ public class Battlesystem : MonoBehaviour
 
         //attack animation
         EnemyAttack();
-        UpdatePlayerTurn();
     }
 
     void UpdatePlayerTurn()
@@ -75,11 +78,21 @@ public class Battlesystem : MonoBehaviour
 
     public void VikAttack()
     {
+        fightBox.SetActive(false);
+        StartCoroutine(VikAttackEnum());
+    }
+    IEnumerator VikAttackEnum()
+    {
         bool gameOver = enemy.TakeDamage(viktoria.damage);
         vikAnim.SetTrigger("attack");
 
-        //gradual reduction
-        enemyHP.value = enemy.currentHP;
+        yield return new WaitForSeconds(1.5f);
+
+        while (enemyHP.value > enemy.currentHP)
+        {
+            enemyHP.value-=0.1f;
+            yield return new WaitForFixedUpdate();
+        }
 
         if (gameOver)
         {
@@ -91,11 +104,21 @@ public class Battlesystem : MonoBehaviour
 
     public void TamAttack()
     {
+        fightBox.SetActive(false);
+        StartCoroutine(TamAttackEnum());
+    }
+    IEnumerator TamAttackEnum()
+    {
         bool gameOver = enemy.TakeDamage(tamara.damage);
         tamAnim.SetTrigger("attack");
 
-        //gradual reduction
-        enemyHP.value = enemy.currentHP;
+        yield return new WaitForSeconds(1.5f);
+
+        while (enemyHP.value > enemy.currentHP)
+        {
+            enemyHP.value -= 0.1f;
+            yield return new WaitForFixedUpdate();
+        }
 
         if (gameOver)
         {
@@ -107,11 +130,21 @@ public class Battlesystem : MonoBehaviour
 
     public void DorAttack()
     {
+        fightBox.SetActive(false);
+        StartCoroutine(DorAttackEnum());
+    }
+    IEnumerator DorAttackEnum()
+    {
         bool gameOver = enemy.TakeDamage(dora.damage);
         dorAnim.SetTrigger("attack");
 
-        //gradual reduction
-        enemyHP.value = enemy.currentHP;
+        yield return new WaitForSeconds(1.5f);
+
+        while (enemyHP.value > enemy.currentHP)
+        {
+            enemyHP.value -= 0.1f;
+            yield return new WaitForFixedUpdate();
+        }
 
         if (gameOver)
         {
@@ -123,14 +156,29 @@ public class Battlesystem : MonoBehaviour
 
     void EnemyAttack()
     {
+        StartCoroutine(EnemyAttackEnum());
+    }
+    IEnumerator EnemyAttackEnum()
+    {
         int chosenPlayerNr = ChoosePlayer();
+
+        yield return new WaitForSeconds(1.5f);
+
+        enemyAnim.enabled = true;
+        enemyAnim.SetTrigger("attack");
+
+        yield return new WaitForSeconds(1.5f);
 
         switch (chosenPlayerNr)
         {
             case 0:
                 bool gameOver = viktoria.TakeDamage(enemy.damage);
-                //gradual reduction
-                viktoriaHP.value = viktoria.currentHP;
+
+                while (viktoriaHP.value > viktoria.currentHP)
+                {
+                    viktoriaHP.value -= 0.1f;
+                    yield return new WaitForFixedUpdate();
+                }
 
                 if (gameOver)
                 {
@@ -140,8 +188,12 @@ public class Battlesystem : MonoBehaviour
                 break;
             case 1:
                 bool gameOver1 = tamara.TakeDamage(enemy.damage);
-                //gradual reduction
-                tamaraHP.value = tamara.currentHP;
+
+                while (tamaraHP.value > tamara.currentHP)
+                {
+                    tamaraHP.value -= 0.1f;
+                    yield return new WaitForFixedUpdate();
+                }
 
                 if (gameOver1)
                 {
@@ -151,8 +203,12 @@ public class Battlesystem : MonoBehaviour
                 break;
             case 2:
                 bool gameOver2 = dora.TakeDamage(enemy.damage);
-                //gradual reduction
-                doraHP.value = dora.currentHP;
+
+                while (doraHP.value > dora.currentHP)
+                {
+                    doraHP.value -= 0.1f;
+                    yield return new WaitForFixedUpdate();
+                }
 
                 if (gameOver2)
                 {
@@ -162,6 +218,8 @@ public class Battlesystem : MonoBehaviour
                 break;
         }
 
+
+        yield return new WaitForSeconds(1.5f);
 
         if (!vikButton.interactable && !tamButton.interactable && !dorButton.interactable)
         {

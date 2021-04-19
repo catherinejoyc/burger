@@ -2065,6 +2065,7 @@ MonoBehaviour:
   vikButton: {fileID: 2147030894280729470}
   tamButton: {fileID: 2147030894657437769}
   dorButton: {fileID: 2147030895306142729}
+  enemyPos: {fileID: 2147030894747064597}
   currentBattleState: 0
   enemyHP: {fileID: 2147030894310032446}
   viktoriaHP: {fileID: 2147030895176304809}

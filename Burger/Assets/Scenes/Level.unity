@@ -6134,7 +6134,7 @@ PrefabInstance:
     - target: {fileID: 2147030895702406470, guid: e8e5d899bd8a14b4c85d8002eb5ff17f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2147030895926600932, guid: e8e5d899bd8a14b4c85d8002eb5ff17f,
         type: 3}
@@ -23681,27 +23681,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2967771532494661892, guid: c01b953149f84a94582221dde9aa700b,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 2.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 2967771532494661892, guid: c01b953149f84a94582221dde9aa700b,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 3.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 2967771532494661892, guid: c01b953149f84a94582221dde9aa700b,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 88d7e231ee31b514aaf378debfa89e97,
-        type: 3}
-    - target: {fileID: 2967771532494661892, guid: c01b953149f84a94582221dde9aa700b,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2967771532494661894, guid: c01b953149f84a94582221dde9aa700b,
         type: 3}

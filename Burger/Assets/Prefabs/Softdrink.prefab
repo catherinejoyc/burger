@@ -77,12 +77,12 @@ SpriteRenderer:
   m_SortingLayerID: 826633807
   m_SortingLayer: 11
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ce8298b88693b2242bbcd34156da4cf2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 88d7e231ee31b514aaf378debfa89e97, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 2.09, y: 3.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -140,8 +140,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6666666, y: 1.6666666}
-    newSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 1.045, y: 1.54}
+    newSize: {x: 2.09, y: 3.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   - Iced Tea for me and-
   - Don't worry, i got you. ;)
   - A water for her please!
-  face: {fileID: 21300000, guid: ce8298b88693b2242bbcd34156da4cf2, type: 3}
+  face: {fileID: 21300000, guid: 88d7e231ee31b514aaf378debfa89e97, type: 3}
 --- !u!114 &2967771532494661950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,6 +180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff8992cc96212544b923b27d88362ae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyUIPref: {fileID: 4844177070935292606, guid: 320cdd34728ab164e9fb048386a76bb5,
+    type: 3}
 --- !u!114 &2967771532494661951
 MonoBehaviour:
   m_ObjectHideFlags: 0

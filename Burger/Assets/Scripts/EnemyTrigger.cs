@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyTrigger : MonoBehaviour
 {
     GameManager gameManager;
+    public GameObject enemyUIPref;
 
     private void Start()
     {
@@ -28,6 +29,6 @@ public class EnemyTrigger : MonoBehaviour
 
         gameManager.radialTrans.StartTransition();
 
-        gameManager.battleSystem.SetUp(GetComponent<Unit>());
+        gameManager.battleSystem.SetUp(GetComponent<Unit>(), enemyUIPref);
     }
 }
