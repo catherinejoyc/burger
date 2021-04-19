@@ -249,6 +249,8 @@ public class Battlesystem : MonoBehaviour
         enemy.gameObject.SetActive(false);
         fightPanel.SetActive(false);
 
+        AudioManager.Instance.PlayOverworldClip();
+
         GameManager.Instance.currentGameState = GameState.Overworld;
     }
 

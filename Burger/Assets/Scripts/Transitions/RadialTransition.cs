@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class RadialTransition : MonoBehaviour
 {
-    [SerializeField]
-    private Image blackImage;
+    public Image blackImage;
     bool transitionIsActive = false;
     GameManager gameManager;
 
@@ -36,6 +35,7 @@ public class RadialTransition : MonoBehaviour
 
         //activate Fight panel etc.
         gameManager.currentGameState = GameState.Fight;
+        gameManager.battleSystem.fightBox.SetActive(true);
         gameManager.battleSystem.fightPanel.SetActive(true);
 
         StartBlendOutTransition();
@@ -53,7 +53,7 @@ public class RadialTransition : MonoBehaviour
 
         while (alpha > 0)
         {
-            alpha -= 0.01f;
+            alpha -= 0.02f;
             blackImage.color = new Color(0, 0, 0, alpha);
             yield return new WaitForFixedUpdate();
         }
