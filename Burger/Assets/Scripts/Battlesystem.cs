@@ -12,6 +12,13 @@ public enum BattleState
     Lost
 }
 
+public enum PlayerAttackType
+{
+    Vik,
+    Tam,
+    Dor
+}
+
 public class Battlesystem : MonoBehaviour
 {
     public GameObject fightPanel;
@@ -21,6 +28,7 @@ public class Battlesystem : MonoBehaviour
     public Button dorButton;
     public Transform enemyPos;
     public BattleState currentBattleState;
+    PlayerAttackType lastPlayerAttack;
 
     public Slider enemyHP;
     public Slider viktoriaHP;
@@ -79,6 +87,7 @@ public class Battlesystem : MonoBehaviour
     public void VikAttack()
     {
         fightBox.SetActive(false);
+        lastPlayerAttack = PlayerAttackType.Vik;
         StartCoroutine(VikAttackEnum());
     }
     IEnumerator VikAttackEnum()
@@ -98,13 +107,14 @@ public class Battlesystem : MonoBehaviour
         {
             Win();
         }
-
-        UpdateEnemyTurn();
+        else
+            UpdateEnemyTurn();
     }
 
     public void TamAttack()
     {
         fightBox.SetActive(false);
+        lastPlayerAttack = PlayerAttackType.Tam;
         StartCoroutine(TamAttackEnum());
     }
     IEnumerator TamAttackEnum()
@@ -124,13 +134,14 @@ public class Battlesystem : MonoBehaviour
         {
             Win();
         }
-
-        UpdateEnemyTurn();
+        else
+            UpdateEnemyTurn();
     }
 
     public void DorAttack()
     {
         fightBox.SetActive(false);
+        lastPlayerAttack = PlayerAttackType.Dor;
         StartCoroutine(DorAttackEnum());
     }
     IEnumerator DorAttackEnum()
@@ -150,8 +161,8 @@ public class Battlesystem : MonoBehaviour
         {
             Win();
         }
-
-        UpdateEnemyTurn();
+        else
+            UpdateEnemyTurn();
     }
 
     void EnemyAttack()
@@ -162,7 +173,10 @@ public class Battlesystem : MonoBehaviour
     {
         int chosenPlayerNr = ChoosePlayer();
 
+        //say dialog
+        ChooseEvilDialog();
         yield return new WaitForSeconds(1.5f);
+        Dialogsystem.instance.dialogPanel.SetActive(false);
 
         enemyAnim.enabled = true;
         enemyAnim.SetTrigger("attack");
@@ -217,7 +231,6 @@ public class Battlesystem : MonoBehaviour
                 }
                 break;
         }
-
 
         yield return new WaitForSeconds(1.5f);
 
@@ -274,5 +287,21 @@ public class Battlesystem : MonoBehaviour
         }
 
         return 3;
+    }
+
+    void ChooseEvilDialog()
+    {
+        switch (lastPlayerAttack)
+        {
+            case PlayerAttackType.Vik:
+                Dialogsystem.instance.Say("You call THAT a slap?");
+                break;
+            case PlayerAttackType.Tam:
+                Dialogsystem.instance.Say("Can you play other chords too?");
+                break;
+            case PlayerAttackType.Dor:
+                Dialogsystem.instance.Say("That's not how you hold drumsticks.");
+                break;
+        }
     }
 }
