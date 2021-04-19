@@ -5996,6 +5996,11 @@ PrefabInstance:
       propertyPath: viktoria
       value: 
       objectReference: {fileID: 1538803329}
+    - target: {fileID: 2147030895702406470, guid: e8e5d899bd8a14b4c85d8002eb5ff17f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8e5d899bd8a14b4c85d8002eb5ff17f, type: 3}
 --- !u!95 &476462481 stripped
@@ -23065,6 +23070,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 719355916}
     m_Modifications:
+    - target: {fileID: 2967771532494661890, guid: c01b953149f84a94582221dde9aa700b,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967771532494661890, guid: c01b953149f84a94582221dde9aa700b,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.31
+      objectReference: {fileID: 0}
     - target: {fileID: 2967771532494661891, guid: c01b953149f84a94582221dde9aa700b,
         type: 3}
       propertyPath: m_RootOrder
@@ -23073,12 +23088,12 @@ PrefabInstance:
     - target: {fileID: 2967771532494661891, guid: c01b953149f84a94582221dde9aa700b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.634241
+      value: -4.72
       objectReference: {fileID: 0}
     - target: {fileID: 2967771532494661891, guid: c01b953149f84a94582221dde9aa700b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.7580614
+      value: -2.49
       objectReference: {fileID: 0}
     - target: {fileID: 2967771532494661891, guid: c01b953149f84a94582221dde9aa700b,
         type: 3}
