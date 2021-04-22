@@ -96,6 +96,7 @@ public class Battlesystem : MonoBehaviour
         vikAnim.SetTrigger("attack");
 
         yield return new WaitForSeconds(1.5f);
+        enemyAnim.SetTrigger("damaged");
 
         while (enemyHP.value > enemy.currentHP)
         {
@@ -123,6 +124,7 @@ public class Battlesystem : MonoBehaviour
         tamAnim.SetTrigger("attack");
 
         yield return new WaitForSeconds(1.5f);
+        enemyAnim.SetTrigger("damaged");
 
         while (enemyHP.value > enemy.currentHP)
         {
@@ -150,6 +152,7 @@ public class Battlesystem : MonoBehaviour
         dorAnim.SetTrigger("attack");
 
         yield return new WaitForSeconds(1.5f);
+        enemyAnim.SetTrigger("damaged");
 
         while (enemyHP.value > enemy.currentHP)
         {
@@ -187,6 +190,7 @@ public class Battlesystem : MonoBehaviour
         {
             case 0:
                 bool gameOver = viktoria.TakeDamage(enemy.damage);
+                vikAnim.SetTrigger("damaged");
 
                 while (viktoriaHP.value > viktoria.currentHP)
                 {
@@ -202,6 +206,7 @@ public class Battlesystem : MonoBehaviour
                 break;
             case 1:
                 bool gameOver1 = tamara.TakeDamage(enemy.damage);
+                tamAnim.SetTrigger("damaged");
 
                 while (tamaraHP.value > tamara.currentHP)
                 {
@@ -217,6 +222,7 @@ public class Battlesystem : MonoBehaviour
                 break;
             case 2:
                 bool gameOver2 = dora.TakeDamage(enemy.damage);
+                dorAnim.SetTrigger("damaged");
 
                 while (doraHP.value > dora.currentHP)
                 {
