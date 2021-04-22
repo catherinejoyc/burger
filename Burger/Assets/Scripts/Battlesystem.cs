@@ -252,6 +252,7 @@ public class Battlesystem : MonoBehaviour
         AudioManager.Instance.PlayOverworldClip();
 
         GameManager.Instance.currentGameState = GameState.Overworld;
+        GameManager.Instance.AddScore();
     }
 
     int ChoosePlayer()

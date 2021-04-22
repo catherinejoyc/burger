@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public enum GameState
 {
@@ -13,6 +14,12 @@ public enum GameState
 
 public class GameManager : MonoBehaviour
 {
+    public float playerTimef = 0; //how much time the player spent
+    public int playerTimei = 0;
+    public int playerScore = 0; //how many enemies the player fought
+    public Text timeDisplay;
+    public Text scoreDisplay;
+
     private static GameManager instance;
     public static GameManager Instance
     {
@@ -49,5 +56,18 @@ public class GameManager : MonoBehaviour
         battleSystem = GetComponent<Battlesystem>();
 
         //Audio starten
+    }
+
+    void Update()
+    {
+        playerTimef += Time.deltaTime;
+        playerTimei = (int)playerTimef;
+        timeDisplay.text = playerTimei.ToString();
+    }
+
+    public void AddScore()
+    {
+        playerScore++;
+        scoreDisplay.text = playerScore.ToString();
     }
 }
