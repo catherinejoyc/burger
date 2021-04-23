@@ -2305,6 +2305,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32bffcec03da9f34483720e67c53f561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTimef: 0
+  playerTimei: 0
+  playerScore: 0
+  timeDisplay: {fileID: 0}
+  scoreDisplay: {fileID: 0}
   currentGameState: 3
   battleSystem: {fileID: 2147030895253864247}
   radialTrans: {fileID: 2147030896112641438}
