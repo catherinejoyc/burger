@@ -23,6 +23,7 @@ public class Battlesystem : MonoBehaviour
 {
     public GameObject fightPanel;
     public GameObject fightBox;
+    GameObject enemyPref;
     public Button vikButton;
     public Button tamButton;
     public Button dorButton;
@@ -46,8 +47,15 @@ public class Battlesystem : MonoBehaviour
     public Animator tamAnim;
     Animator enemyAnim;
 
+    bool isSettingUp = false;
+
     public void SetUp(Unit en, GameObject enemyUIPref)
     {
+        if (isSettingUp)
+            return;
+
+        isSettingUp = true;
+
         currentBattleState = BattleState.PlayerTurn;
 
         viktoriaHP.maxValue = viktoria.maxHP;
@@ -59,7 +67,7 @@ public class Battlesystem : MonoBehaviour
         doraHP.maxValue = dora.maxHP;
         doraHP.value = dora.currentHP;
 
-        GameObject enemyPref = Instantiate(enemyUIPref, enemyPos);
+        enemyPref = Instantiate(enemyUIPref, enemyPos);
 
         enemyHP.maxValue = en.maxHP;
         enemyHP.value = en.currentHP;
@@ -70,6 +78,8 @@ public class Battlesystem : MonoBehaviour
 
     void UpdateEnemyTurn()
     {
+        isSettingUp = false;
+
         currentBattleState = BattleState.EnemyTurn;
         fightBox.SetActive(false);
 
@@ -252,7 +262,18 @@ public class Battlesystem : MonoBehaviour
 
     void Win()
     {
+        StartCoroutine(WinEnum());
+    }
+
+    IEnumerator WinEnum()
+    {
+        yield return new WaitForSeconds(2f);
+
+        Destroy(enemyPref.gameObject);
         enemy.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(1);
+
         fightPanel.SetActive(false);
 
         AudioManager.Instance.PlayOverworldClip();
@@ -260,6 +281,7 @@ public class Battlesystem : MonoBehaviour
         GameManager.Instance.currentGameState = GameState.Overworld;
         GameManager.Instance.AddScore();
     }
+
 
     int ChoosePlayer()
     {

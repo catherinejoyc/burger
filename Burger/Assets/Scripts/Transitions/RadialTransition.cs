@@ -18,7 +18,8 @@ public class RadialTransition : MonoBehaviour
     {
         if (!transitionIsActive)
         {
-            StartCoroutine(Transition());           
+            StartCoroutine(Transition());
+            print("Start Transition");
         }        
     }
 
@@ -59,5 +60,6 @@ public class RadialTransition : MonoBehaviour
         }
 
         transitionIsActive = false;
+        print("transitionIsActive = " + transitionIsActive);
     }
 }

@@ -54,6 +54,7 @@ public class AudioManager : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex == 2 && !overworld && !fightscene || SceneManager.GetActiveScene().buildIndex == 3 && !overworld && !fightscene || SceneManager.GetActiveScene().buildIndex == 4 && !overworld && !fightscene)
         {
             overworld = true;
+            fightscene = false;
             PlayOverworldClip();
 
         }
@@ -61,6 +62,9 @@ public class AudioManager : MonoBehaviour
 
     public void PlayFightClip()
     {
+        if (fightscene)
+            return;
+
         fightscene = true;
         audioSrc.clip = FightClip;
         audioSrc.Play();
