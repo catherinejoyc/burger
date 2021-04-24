@@ -267,6 +267,12 @@ public class Battlesystem : MonoBehaviour
 
     IEnumerator WinEnum()
     {
+        yield return new WaitForSeconds(1.5f);
+
+        vikAnim.SetTrigger("eat");
+        tamAnim.SetTrigger("eat");
+        dorAnim.SetTrigger("eat");
+
         yield return new WaitForSeconds(2f);
 
         Destroy(enemyPref.gameObject);
@@ -316,7 +322,6 @@ public class Battlesystem : MonoBehaviour
                     break;
             }
         }
-
         return 3;
     }
 

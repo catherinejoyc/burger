@@ -26,6 +26,7 @@ public class RadialTransition : MonoBehaviour
     IEnumerator Transition()
     {
         transitionIsActive = true;
+        blackImage.color = new Color(0, 0, 0, 1);
         blackImage.fillAmount = 0;
 
         while (blackImage.fillAmount < 1)
