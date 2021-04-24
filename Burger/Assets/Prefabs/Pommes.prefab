@@ -165,7 +165,7 @@ MonoBehaviour:
   - Hey gorgeous! ;)
   - What? Why are you so tense?
   - Can't you take a compliment?
-  face: {fileID: 21300000, guid: 141bc5b734dab914289dcd7c891929fb, type: 3}
+  face: {fileID: 21300000, guid: d6acffd6aa92a0640a48f901e37175e9, type: 3}
 --- !u!114 &6661134961155034658
 MonoBehaviour:
   m_ObjectHideFlags: 0
