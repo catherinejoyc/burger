@@ -140,7 +140,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.56}
+    oldSize: {x: 1.0666667, y: 1.3}
     newSize: {x: 2.09, y: 3.08}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -162,8 +162,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialog:
-  - You look so nice today!
-  - One should be allowed to say.
+  - Hey gorgeous! ;)
+  - What? Why are you so tense?
+  - Can't you take a compliment?
   face: {fileID: 21300000, guid: 141bc5b734dab914289dcd7c891929fb, type: 3}
 --- !u!114 &6661134961155034658
 MonoBehaviour:
