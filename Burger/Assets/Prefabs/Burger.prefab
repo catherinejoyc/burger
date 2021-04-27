@@ -196,3 +196,4 @@ MonoBehaviour:
   maxHP: 5
   currentHP: 5
   damage: 4
+  isBurger: 1

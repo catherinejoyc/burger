@@ -286,6 +286,9 @@ public class Battlesystem : MonoBehaviour
 
         GameManager.Instance.currentGameState = GameState.Overworld;
         GameManager.Instance.AddScore();
+
+        if (enemy.isBurger)
+            GameManager.Instance.EndGame();
     }
 
 

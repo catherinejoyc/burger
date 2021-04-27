@@ -7,7 +7,7 @@ public class Unit : MonoBehaviour
     public int maxHP;
     public int currentHP;
     public int damage;
-
+    public bool isBurger;
 
     public bool TakeDamage(int dmg)
     {

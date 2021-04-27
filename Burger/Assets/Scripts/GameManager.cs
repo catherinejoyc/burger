@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public enum GameState
@@ -69,5 +70,10 @@ public class GameManager : MonoBehaviour
     {
         playerScore++;
         scoreDisplay.text = playerScore.ToString();
+    }
+
+    public void EndGame()
+    {
+        SceneManager.LoadScene(5);
     }
 }
