@@ -91,7 +91,7 @@ public class Battlesystem : MonoBehaviour
     {
         currentBattleState = BattleState.PlayerTurn;
         fightBox.SetActive(true);
-
+        print("PlayerTurn2");
     }
 
     public void VikAttack()
@@ -212,6 +212,7 @@ public class Battlesystem : MonoBehaviour
                 {
                     //kill Vik
                     vikButton.interactable = false;
+                    print("VikAttackBtn " + vikButton.interactable);
                 }
                 break;
             case 1:
@@ -228,6 +229,7 @@ public class Battlesystem : MonoBehaviour
                 {
                     //kill Tamara
                     tamButton.interactable = false;
+                    print("TamAttackBtn " + tamButton.interactable);
                 }
                 break;
             case 2:
@@ -244,6 +246,7 @@ public class Battlesystem : MonoBehaviour
                 {
                     //kill dora
                     dorButton.interactable = false;
+                    print("DorAttackBtn " + dorButton.interactable);
                 }
                 break;
         }
@@ -258,6 +261,7 @@ public class Battlesystem : MonoBehaviour
 
         //player turn
         UpdatePlayerTurn();
+        print("PlayerTurn1");
     }
 
     void Win()
