@@ -251,7 +251,7 @@ public class Battlesystem : MonoBehaviour
         if (!vikButton.interactable && !tamButton.interactable && !dorButton.interactable)
         {
             //die
-            SceneManager.LoadScene(6);
+            SceneManager.LoadScene(5);
         }
 
         //player turn

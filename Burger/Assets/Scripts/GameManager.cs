@@ -74,6 +74,6 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(4);
     }
 }

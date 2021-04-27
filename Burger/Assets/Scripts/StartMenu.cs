@@ -17,17 +17,17 @@ public class StartMenu : MonoBehaviour
     }
     public void StartGameVik()
     {
-        SceneManager.LoadScene(2); 
+        SceneManager.LoadScene(1); 
     }
 
     public void StartGameTam()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
     }
 
     public void StartGameDor()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
 
     public void StartCredits()
