@@ -251,7 +251,7 @@ public class Battlesystem : MonoBehaviour
         if (!vikButton.interactable && !tamButton.interactable && !dorButton.interactable)
         {
             //die
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(6);
         }
 
         //player turn
@@ -275,6 +275,12 @@ public class Battlesystem : MonoBehaviour
 
         Destroy(enemyPref.gameObject);
         enemy.gameObject.SetActive(false);
+
+        yield return new WaitForSeconds(1);
+
+        vikAnim.SetTrigger("finish");
+        tamAnim.SetTrigger("finish");
+        dorAnim.SetTrigger("finish");
 
         yield return new WaitForSeconds(1);
 
