@@ -200,6 +200,11 @@ public class Battlesystem : MonoBehaviour
         {
             case 0:
                 bool gameOver = viktoria.TakeDamage(enemy.damage);
+                if (gameOver)
+                {
+                    //kill Vik
+                    vikButton.interactable = false;
+                }
                 vikAnim.SetTrigger("damaged");
 
                 while (viktoriaHP.value > viktoria.currentHP)
@@ -207,16 +212,14 @@ public class Battlesystem : MonoBehaviour
                     viktoriaHP.value -= 0.1f;
                     yield return new WaitForFixedUpdate();
                 }
-
-                if (gameOver)
-                {
-                    //kill Vik
-                    vikButton.interactable = false;
-                    print("VikAttackBtn " + vikButton.interactable);
-                }
                 break;
             case 1:
                 bool gameOver1 = tamara.TakeDamage(enemy.damage);
+                if (gameOver1)
+                {
+                    //kill Tamara
+                    tamButton.interactable = false;
+                }
                 tamAnim.SetTrigger("damaged");
 
                 while (tamaraHP.value > tamara.currentHP)
@@ -224,29 +227,21 @@ public class Battlesystem : MonoBehaviour
                     tamaraHP.value -= 0.1f;
                     yield return new WaitForFixedUpdate();
                 }
-
-                if (gameOver1)
-                {
-                    //kill Tamara
-                    tamButton.interactable = false;
-                    print("TamAttackBtn " + tamButton.interactable);
-                }
                 break;
             case 2:
                 bool gameOver2 = dora.TakeDamage(enemy.damage);
+                if (gameOver2)
+                {
+                    //kill dora
+                    dorButton.interactable = false;
+                    print("DorAttackBtn " + dorButton.interactable);
+                }
                 dorAnim.SetTrigger("damaged");
 
                 while (doraHP.value > dora.currentHP)
                 {
                     doraHP.value -= 0.1f;
                     yield return new WaitForFixedUpdate();
-                }
-
-                if (gameOver2)
-                {
-                    //kill dora
-                    dorButton.interactable = false;
-                    print("DorAttackBtn " + dorButton.interactable);
                 }
                 break;
         }
@@ -261,7 +256,6 @@ public class Battlesystem : MonoBehaviour
 
         //player turn
         UpdatePlayerTurn();
-        print("PlayerTurn1");
     }
 
     void Win()
