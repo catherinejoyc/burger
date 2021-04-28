@@ -10,9 +10,15 @@ public class Credits : MonoBehaviour
 {
     public Slider progressBar;
     public Text savedToText;
+    public GameObject downloadSlider;
 
+    private void Start()
+    {
+        downloadSlider.SetActive(false);
+    }
     public void Download()
     {
+        downloadSlider.SetActive(true);
         WebClient webClient = new WebClient();
         webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
         webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
