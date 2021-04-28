@@ -237,6 +237,7 @@ public class Battlesystem : MonoBehaviour
                     vikAnim.SetTrigger("death");
                     vikAttackBtn.enabled = false;
                     vikHealBtn.enabled = false;
+                    
                 }
                 vikAnim.SetTrigger("damaged");
 
