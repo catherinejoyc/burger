@@ -22,13 +22,12 @@ public class Credits : MonoBehaviour
         WebClient webClient = new WebClient();
         webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
         webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
-        webClient.DownloadFileAsync(new Uri("https://cdn.discordapp.com/attachments/833394647932993537/833395026507202640/Dives_-_Burger_320.mp3"), Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/Dives-Burger.mp3");
+        webClient.DownloadFileAsync(new Uri("https://cdn.discordapp.com/attachments/833394647932993537/833395026507202640/Dives_-_Burger_320.mp3"), Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/Dives - Burger.mp3");
     }
     private void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
     {
         progressBar.value = e.ProgressPercentage;
     }
-
 
     private void Completed(object sender, AsyncCompletedEventArgs e)
     {
