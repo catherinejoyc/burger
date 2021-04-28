@@ -1411,7 +1411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1070557106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2258,7 +2258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1389506843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2549,7 +2549,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -451.1667}
-  m_SizeDelta: {x: 298.91, y: 102.4}
+  m_SizeDelta: {x: 808.97, y: 102.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1484298829
 MonoBehaviour:
@@ -2587,10 +2587,7 @@ MonoBehaviour:
   m_Text: 'Soundtrack
 
 
-    DIVES
-
-
-    Wolf Lehmann'
+    DIVES - Burger (Wolf Lehmann 8bit Remix)'
 --- !u!222 &1484298830
 CanvasRenderer:
   m_ObjectHideFlags: 0
