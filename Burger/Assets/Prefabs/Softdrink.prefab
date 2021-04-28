@@ -167,7 +167,7 @@ MonoBehaviour:
   - Iced Tea for me and-
   - Don't worry, i got you. ;)
   - A water for her please!
-  face: {fileID: 21300000, guid: 88d7e231ee31b514aaf378debfa89e97, type: 3}
+  face: {fileID: 21300000, guid: 668e759b3e31c2243a4d1f0aeb34bda7, type: 3}
 --- !u!114 &2967771532494661950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,3 +197,4 @@ MonoBehaviour:
   maxHP: 5
   currentHP: 5
   damage: 2
+  isBurger: 0
