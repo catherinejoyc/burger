@@ -286,7 +286,6 @@ public class Battlesystem : MonoBehaviour
         {
             //die
             SceneManager.LoadScene(5);
-            print("DIE");
         }
 
         //player turn
