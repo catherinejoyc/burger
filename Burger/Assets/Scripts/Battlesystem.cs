@@ -24,9 +24,12 @@ public class Battlesystem : MonoBehaviour
     public GameObject fightPanel;
     public GameObject fightBox;
     GameObject enemyPref;
-    public Button vikButton;
-    public Button tamButton;
-    public Button dorButton;
+    public Button vikAttackBtn;
+    public Button vikHealBtn;
+    public Button tamAttackBtn;
+    public Button tamHealBtn;
+    public Button dorAttackBtn;
+    public Button dorHealBtn;
     public Transform enemyPos;
     public BattleState currentBattleState;
     PlayerAttackType lastPlayerAttack;
@@ -188,7 +191,7 @@ public class Battlesystem : MonoBehaviour
 
         //say dialog
 
-        if(GameManager.Instance.playerScore == 0)
+        if (GameManager.Instance.playerScore == 0)
         {
             ChooseEvilDialog();
         }
@@ -231,7 +234,9 @@ public class Battlesystem : MonoBehaviour
                 if (viktoria.TakeDamage(enemy.damage))
                 {
                     //kill Vik
-                    vikButton.interactable = false;
+                    vikAnim.SetTrigger("death");
+                    vikAttackBtn.enabled = false;
+                    vikHealBtn.enabled = false;
                 }
                 vikAnim.SetTrigger("damaged");
 
@@ -245,7 +250,9 @@ public class Battlesystem : MonoBehaviour
                 if (tamara.TakeDamage(enemy.damage))
                 {
                     //kill Tamara
-                    tamButton.interactable = false;
+                    tamAnim.SetTrigger("death");
+                    tamAttackBtn.enabled = false;
+                    tamHealBtn.enabled = false;
                 }
                 tamAnim.SetTrigger("damaged");
 
@@ -259,8 +266,9 @@ public class Battlesystem : MonoBehaviour
                 if (dora.TakeDamage(enemy.damage))
                 {
                     //kill dora
-                    dorButton.interactable = false;
-                    print("DorAttackBtn " + dorButton.interactable);
+                    dorAnim.SetTrigger("death");
+                    dorAttackBtn.enabled = false;
+                    dorHealBtn.enabled = false;
                 }
                 dorAnim.SetTrigger("damaged");
 
@@ -274,10 +282,11 @@ public class Battlesystem : MonoBehaviour
 
         yield return new WaitForSeconds(1.5f);
 
-        if (!vikButton.interactable && !tamButton.interactable && !dorButton.interactable)
+        if (!vikAttackBtn.enabled && !tamAttackBtn.enabled && !dorAttackBtn.enabled)
         {
             //die
             SceneManager.LoadScene(5);
+            print("DIE");
         }
 
         //player turn
@@ -333,21 +342,21 @@ public class Battlesystem : MonoBehaviour
             switch (i)
             {
                 case 0:
-                    if (vikButton.interactable)
+                    if (vikAttackBtn.enabled)
                     {
                         playerChoosable = true;
                         return 0;
                     }
                     break;
                 case 1:
-                    if (tamButton.interactable)
+                    if (tamAttackBtn.enabled)
                     {
                         playerChoosable = true;
                         return 1;
                     }
                     break;
                 case 2:
-                    if (dorButton.interactable)
+                    if (dorAttackBtn.enabled)
                     {
                         playerChoosable = true;
                         return 2;
