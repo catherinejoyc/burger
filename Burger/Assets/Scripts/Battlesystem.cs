@@ -476,18 +476,21 @@ public class Battlesystem : MonoBehaviour
     public void VikHeal()
     {
         //heal Vik
+        vikAnim.SetTrigger("heal");
         print("vik has been healed");
     }
 
     public void DorHeal()
     {
         //heal Dor
+        dorAnim.SetTrigger("heal");
         print("dor has been healed");
     }
 
     public void TamHeal()
     {
         //heal Tam
+        tamAnim.SetTrigger("heal");
         print("tam has been healed");
     }
 }
