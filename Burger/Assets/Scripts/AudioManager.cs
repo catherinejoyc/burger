@@ -51,7 +51,7 @@ public class AudioManager : MonoBehaviour
     {
 
         audioSrc.volume = musicVolume;
-        if (SceneManager.GetActiveScene().buildIndex == 1 && !overworld && !fightscene || SceneManager.GetActiveScene().buildIndex == 2 && !overworld && !fightscene || SceneManager.GetActiveScene().buildIndex == 3 && !overworld && !fightscene)
+        if (SceneManager.GetActiveScene().buildIndex == 1 && !overworld && !fightscene || SceneManager.GetActiveScene().buildIndex == 2 && !overworld && !fightscene || SceneManager.GetActiveScene().buildIndex == 3 && !overworld && !fightscene || SceneManager.GetActiveScene().buildIndex == 5 && !overworld && !fightscene)
         {
             overworld = true;
             fightscene = false;

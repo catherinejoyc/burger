@@ -217,7 +217,7 @@ public class Battlesystem : MonoBehaviour
             ChooseEvilDialog7();
         }
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2.5f);
         Dialogsystem.instance.dialogPanel.SetActive(false);
 
         enemyAnim.enabled = true;
@@ -471,5 +471,23 @@ public class Battlesystem : MonoBehaviour
                 Dialogsystem.instance.Say("I think your rythm is off.");
                 break;
         }
+    }
+
+    public void VikHeal()
+    {
+        //heal Vik
+        print("vik has been healed");
+    }
+
+    public void DorHeal()
+    {
+        //heal Dor
+        print("dor has been healed");
+    }
+
+    public void TamHeal()
+    {
+        //heal Tam
+        print("tam has been healed");
     }
 }
