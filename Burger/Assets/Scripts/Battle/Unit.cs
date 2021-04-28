@@ -7,6 +7,7 @@ public class Unit : MonoBehaviour
     public int maxHP;
     public int currentHP;
     public int damage;
+    public int healFactor = 3;
     public bool isBurger;
 
     public bool TakeDamage(int dmg)
@@ -20,5 +21,17 @@ public class Unit : MonoBehaviour
 
         return false;
     }
+
+    //public bool Heal()
+    //{
+    //    currentHP += healFactor;
+
+    //    if (currentHP <= 0)
+    //    {
+    //        return true;
+    //    }
+
+    //    return false;
+    //}
 
 }
