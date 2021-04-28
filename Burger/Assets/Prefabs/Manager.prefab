@@ -2232,9 +2232,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fightPanel: {fileID: 2147030895639840741}
   fightBox: {fileID: 2147030895248213622}
-  vikButton: {fileID: 6155958054340721000}
-  tamButton: {fileID: 800640065}
-  dorButton: {fileID: 1555099192}
+  vikAttackBtn: {fileID: 6155958054340721000}
+  vikHealBtn: {fileID: 696642701492194600}
+  tamAttackBtn: {fileID: 800640065}
+  tamHealBtn: {fileID: 394023146411370389}
+  dorAttackBtn: {fileID: 1555099192}
+  dorHealBtn: {fileID: 7592670876837766374}
   enemyPos: {fileID: 2147030894747064597}
   currentBattleState: 0
   enemyHP: {fileID: 2147030894310032446}
