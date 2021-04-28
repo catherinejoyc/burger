@@ -12,7 +12,14 @@ public class Unit : MonoBehaviour
 
     public bool TakeDamage(int dmg)
     {
-        currentHP -= dmg;
+        if (currentHP - dmg < 0)
+        {
+            currentHP = 0;
+        }
+        else
+        {
+            currentHP -= dmg;
+        }
 
         if (currentHP <= 0)
         {
