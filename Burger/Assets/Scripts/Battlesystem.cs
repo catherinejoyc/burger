@@ -385,7 +385,7 @@ public class Battlesystem : MonoBehaviour
                 Dialogsystem.instance.Say("I don't want any treble!");
                 break;
             case PlayerAttackType.Tam:
-                Dialogsystem.instance.Say("Have you tried music theory?");
+                Dialogsystem.instance.Say("Damn. Must be this time of the month...");
                 break;
             case PlayerAttackType.Dor:
                 Dialogsystem.instance.Say("Do I look like a drumset to you???");
@@ -401,10 +401,10 @@ public class Battlesystem : MonoBehaviour
                 Dialogsystem.instance.Say("Come on, this doesn't have to end on such a low note.");
                 break;
             case PlayerAttackType.Tam:
-                Dialogsystem.instance.Say("Damn. Must be this time of the month...");
+                Dialogsystem.instance.Say("Have you tried music theory?");
                 break;
             case PlayerAttackType.Dor:
-                Dialogsystem.instance.Say("I think your rythm is off.");
+                Dialogsystem.instance.Say("Hey! I wasn't prepared!");
                 break;
         }
     }
@@ -414,13 +414,13 @@ public class Battlesystem : MonoBehaviour
         switch (lastPlayerAttack)
         {
             case PlayerAttackType.Vik:
-                Dialogsystem.instance.Say("ouch");
+                Dialogsystem.instance.Say("I didn't mean it that way!");
                 break;
             case PlayerAttackType.Tam:
-                Dialogsystem.instance.Say("ouch");
+                Dialogsystem.instance.Say("Whatever. I didn't like you anyway.");
                 break;
             case PlayerAttackType.Dor:
-                Dialogsystem.instance.Say("ouch");
+                Dialogsystem.instance.Say("So this is what I get for being a nice guy?");
                 break;
         }
     }
@@ -430,13 +430,13 @@ public class Battlesystem : MonoBehaviour
         switch (lastPlayerAttack)
         {
             case PlayerAttackType.Vik:
-                Dialogsystem.instance.Say("ouch");
+                Dialogsystem.instance.Say("Your're giving me a headache!");
                 break;
             case PlayerAttackType.Tam:
-                Dialogsystem.instance.Say("ouch");
+                Dialogsystem.instance.Say("Is that a fret?");
                 break;
             case PlayerAttackType.Dor:
-                Dialogsystem.instance.Say("ouch");
+                Dialogsystem.instance.Say("Wow, I really got a kick out of this!");
                 break;
         }
     }
@@ -446,13 +446,13 @@ public class Battlesystem : MonoBehaviour
         switch (lastPlayerAttack)
         {
             case PlayerAttackType.Vik:
-                Dialogsystem.instance.Say("ouch");
+                Dialogsystem.instance.Say("Oh, give me a break!");
                 break;
             case PlayerAttackType.Tam:
-                Dialogsystem.instance.Say("ouch");
+                Dialogsystem.instance.Say("Now that was just rude.");
                 break;
             case PlayerAttackType.Dor:
-                Dialogsystem.instance.Say("ouch");
+                Dialogsystem.instance.Say("Boo! Get outta here!");
                 break;
         }
     }
@@ -462,13 +462,13 @@ public class Battlesystem : MonoBehaviour
         switch (lastPlayerAttack)
         {
             case PlayerAttackType.Vik:
-                Dialogsystem.instance.Say("ouch");
+                Dialogsystem.instance.Say("Good hit. Hope you don't mind me taking notes.");
                 break;
             case PlayerAttackType.Tam:
-                Dialogsystem.instance.Say("ouch");
+                Dialogsystem.instance.Say("That really struck a chord.");
                 break;
             case PlayerAttackType.Dor:
-                Dialogsystem.instance.Say("ouch");
+                Dialogsystem.instance.Say("I think your rythm is off.");
                 break;
         }
     }
