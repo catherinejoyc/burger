@@ -228,8 +228,7 @@ public class Battlesystem : MonoBehaviour
         switch (chosenPlayerNr)
         {
             case 0:
-                bool gameOver = viktoria.TakeDamage(enemy.damage);
-                if (gameOver)
+                if (viktoria.TakeDamage(enemy.damage))
                 {
                     //kill Vik
                     vikButton.interactable = false;
@@ -243,8 +242,7 @@ public class Battlesystem : MonoBehaviour
                 }
                 break;
             case 1:
-                bool gameOver1 = tamara.TakeDamage(enemy.damage);
-                if (gameOver1)
+                if (tamara.TakeDamage(enemy.damage))
                 {
                     //kill Tamara
                     tamButton.interactable = false;
@@ -258,8 +256,7 @@ public class Battlesystem : MonoBehaviour
                 }
                 break;
             case 2:
-                bool gameOver2 = dora.TakeDamage(enemy.damage);
-                if (gameOver2)
+                if (dora.TakeDamage(enemy.damage))
                 {
                     //kill dora
                     dorButton.interactable = false;
@@ -475,27 +472,67 @@ public class Battlesystem : MonoBehaviour
 
     public void VikHeal()
     {
-        //heal Vik
-        //viktoria.Heal();
+        fightBox.SetActive(false);
+        lastPlayerAttack = PlayerAttackType.Vik;
+        StartCoroutine(VikHealEnum());
+    }
+    IEnumerator VikHealEnum()
+    {
+        viktoria.Heal();
         vikAnim.SetTrigger("heal");
-        print("vik has been healed");
 
+        yield return new WaitForSeconds(1.5f);
 
+        while (viktoriaHP.value < viktoria.currentHP)
+        {
+            viktoriaHP.value += 0.1f;
+            yield return new WaitForFixedUpdate();
+        }
+
+        UpdateEnemyTurn();
     }
 
     public void DorHeal()
     {
-        //heal Dor
-        //dora.Heal();
+        fightBox.SetActive(false);
+        lastPlayerAttack = PlayerAttackType.Dor;
+        StartCoroutine(DorHealEnum());
+    }
+    IEnumerator DorHealEnum()
+    {
+        dora.Heal();
         dorAnim.SetTrigger("heal");
-        print("dor has been healed");
+
+        yield return new WaitForSeconds(1.5f);
+
+        while (doraHP.value < dora.currentHP)
+        {
+            doraHP.value += 0.1f;
+            yield return new WaitForFixedUpdate();
+        }
+
+        UpdateEnemyTurn();
     }
 
     public void TamHeal()
     {
-        //heal Tam
-        //tamara.Heal();
+        fightBox.SetActive(false);
+        lastPlayerAttack = PlayerAttackType.Tam;
+        StartCoroutine(TamHealEnum());
+    }
+    IEnumerator TamHealEnum()
+    {
+        tamara.Heal();
         tamAnim.SetTrigger("heal");
-        print("tam has been healed");
+
+        yield return new WaitForSeconds(1.5f);
+
+        while (tamaraHP.value < tamara.currentHP)
+        {
+            tamaraHP.value += 0.1f;
+            yield return new WaitForFixedUpdate();
+        }
+
+        UpdateEnemyTurn();
     }
 }

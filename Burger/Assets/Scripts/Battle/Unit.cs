@@ -22,16 +22,17 @@ public class Unit : MonoBehaviour
         return false;
     }
 
-    //public bool Heal()
-    //{
-    //    currentHP += healFactor;
+    public bool Heal()
+    {
+        if (currentHP + healFactor > maxHP)
+        {
+            currentHP = maxHP;
+        }
+        else
+        {
+            currentHP += healFactor;
+        }
 
-    //    if (currentHP <= 0)
-    //    {
-    //        return true;
-    //    }
-
-    //    return false;
-    //}
-
+        return false;
+    }
 }
