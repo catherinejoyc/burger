@@ -76,4 +76,25 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(4);
     }
+
+    //VariableMagician
+    [Header("Overworld Character Prefabs")]
+    public GameObject viktoriaPref;
+    public GameObject tamaraPref;
+    public GameObject doraPref;
+    public void EnableCharacter(int index)
+    {
+        switch (index)
+        {
+            case 1:
+                viktoriaPref.SetActive(true);
+                break;
+            case 2:
+                tamaraPref.SetActive(true);
+                break;
+            case 3:
+                doraPref.SetActive(true);
+                break;
+        }
+    }
 }

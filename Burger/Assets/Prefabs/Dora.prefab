@@ -21,12 +21,12 @@ PrefabInstance:
     - target: {fileID: 4726391833726518382, guid: 501aef55ec1f5b24682dd3a12cb916ff,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.56
+      value: 1.3714286
       objectReference: {fileID: 0}
     - target: {fileID: 4726391833726518382, guid: 501aef55ec1f5b24682dd3a12cb916ff,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 5.12
+      value: 1.9428571
       objectReference: {fileID: 0}
     - target: {fileID: 4726391834069901518, guid: 501aef55ec1f5b24682dd3a12cb916ff,
         type: 3}
@@ -36,12 +36,12 @@ PrefabInstance:
     - target: {fileID: 4726391834069901518, guid: 501aef55ec1f5b24682dd3a12cb916ff,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -4.62
       objectReference: {fileID: 0}
     - target: {fileID: 4726391834069901518, guid: 501aef55ec1f5b24682dd3a12cb916ff,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.72
       objectReference: {fileID: 0}
     - target: {fileID: 4726391834069901518, guid: 501aef55ec1f5b24682dd3a12cb916ff,
         type: 3}
@@ -88,5 +88,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dora
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4726391832846319792, guid: 501aef55ec1f5b24682dd3a12cb916ff, type: 3}
+    - {fileID: 4726391832846319793, guid: 501aef55ec1f5b24682dd3a12cb916ff, type: 3}
+    - {fileID: 4726391832846319798, guid: 501aef55ec1f5b24682dd3a12cb916ff, type: 3}
+    - {fileID: 4726391834061523048, guid: 501aef55ec1f5b24682dd3a12cb916ff, type: 3}
+    - {fileID: 4726391834061523050, guid: 501aef55ec1f5b24682dd3a12cb916ff, type: 3}
+    - {fileID: 4726391834061523051, guid: 501aef55ec1f5b24682dd3a12cb916ff, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 501aef55ec1f5b24682dd3a12cb916ff, type: 3}

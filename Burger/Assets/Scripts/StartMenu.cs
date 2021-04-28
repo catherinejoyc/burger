@@ -15,19 +15,9 @@ public class StartMenu : MonoBehaviour
         credits.SetActive(false);
         chooseCharacter.SetActive(false);
     }
-    public void StartGameVik()
+    public void StartGame()
     {
         SceneManager.LoadScene(1); 
-    }
-
-    public void StartGameTam()
-    {
-        SceneManager.LoadScene(2);
-    }
-
-    public void StartGameDor()
-    {
-        SceneManager.LoadScene(3);
     }
 
     public void StartCredits()
