@@ -187,7 +187,36 @@ public class Battlesystem : MonoBehaviour
         int chosenPlayerNr = ChoosePlayer();
 
         //say dialog
-        ChooseEvilDialog();
+
+        if(GameManager.Instance.playerScore == 0)
+        {
+            ChooseEvilDialog();
+        }
+        else if (GameManager.Instance.playerScore == 1)
+        {
+            ChooseEvilDialog2();
+        }
+        else if (GameManager.Instance.playerScore == 2)
+        {
+            ChooseEvilDialog3();
+        }
+        else if (GameManager.Instance.playerScore == 3)
+        {
+            ChooseEvilDialog4();
+        }
+        else if (GameManager.Instance.playerScore == 4)
+        {
+            ChooseEvilDialog5();
+        }
+        else if (GameManager.Instance.playerScore == 5)
+        {
+            ChooseEvilDialog6();
+        }
+        else if (GameManager.Instance.playerScore == 6)
+        {
+            ChooseEvilDialog7();
+        }
+
         yield return new WaitForSeconds(1.5f);
         Dialogsystem.instance.dialogPanel.SetActive(false);
 
@@ -344,6 +373,102 @@ public class Battlesystem : MonoBehaviour
                 break;
             case PlayerAttackType.Dor:
                 Dialogsystem.instance.Say("That's not how you hold drumsticks.");
+                break;
+        }
+    }
+
+    void ChooseEvilDialog2()
+    {
+        switch (lastPlayerAttack)
+        {
+            case PlayerAttackType.Vik:
+                Dialogsystem.instance.Say("I don't want any treble!");
+                break;
+            case PlayerAttackType.Tam:
+                Dialogsystem.instance.Say("Have you tried music theory?");
+                break;
+            case PlayerAttackType.Dor:
+                Dialogsystem.instance.Say("Do I look like a drumset to you???");
+                break;
+        }
+    }
+
+    void ChooseEvilDialog3()
+    {
+        switch (lastPlayerAttack)
+        {
+            case PlayerAttackType.Vik:
+                Dialogsystem.instance.Say("Come on, this doesn't have to end on such a low note.");
+                break;
+            case PlayerAttackType.Tam:
+                Dialogsystem.instance.Say("Damn. Must be this time of the month...");
+                break;
+            case PlayerAttackType.Dor:
+                Dialogsystem.instance.Say("I think your rythm is off.");
+                break;
+        }
+    }
+
+    void ChooseEvilDialog4()
+    {
+        switch (lastPlayerAttack)
+        {
+            case PlayerAttackType.Vik:
+                Dialogsystem.instance.Say("ouch");
+                break;
+            case PlayerAttackType.Tam:
+                Dialogsystem.instance.Say("ouch");
+                break;
+            case PlayerAttackType.Dor:
+                Dialogsystem.instance.Say("ouch");
+                break;
+        }
+    }
+
+    void ChooseEvilDialog5()
+    {
+        switch (lastPlayerAttack)
+        {
+            case PlayerAttackType.Vik:
+                Dialogsystem.instance.Say("ouch");
+                break;
+            case PlayerAttackType.Tam:
+                Dialogsystem.instance.Say("ouch");
+                break;
+            case PlayerAttackType.Dor:
+                Dialogsystem.instance.Say("ouch");
+                break;
+        }
+    }
+
+    void ChooseEvilDialog6()
+    {
+        switch (lastPlayerAttack)
+        {
+            case PlayerAttackType.Vik:
+                Dialogsystem.instance.Say("ouch");
+                break;
+            case PlayerAttackType.Tam:
+                Dialogsystem.instance.Say("ouch");
+                break;
+            case PlayerAttackType.Dor:
+                Dialogsystem.instance.Say("ouch");
+                break;
+        }
+    }
+
+    void ChooseEvilDialog7()
+    {
+        switch (lastPlayerAttack)
+        {
+            case PlayerAttackType.Vik:
+                Dialogsystem.instance.Say("ouch");
+                break;
+            case PlayerAttackType.Tam:
+                Dialogsystem.instance.Say("ouch");
+                break;
+            case PlayerAttackType.Dor:
+                Dialogsystem.instance.Say("ouch");
                 break;
         }
     }
