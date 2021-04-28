@@ -477,7 +477,6 @@ public class Battlesystem : MonoBehaviour
     {
         //heal Vik
         //viktoria.Heal();
-        viktoriaHP.value += 3f;
         vikAnim.SetTrigger("heal");
         print("vik has been healed");
 
@@ -488,7 +487,6 @@ public class Battlesystem : MonoBehaviour
     {
         //heal Dor
         //dora.Heal();
-        doraHP.value += 3f;
         dorAnim.SetTrigger("heal");
         print("dor has been healed");
     }
@@ -497,7 +495,6 @@ public class Battlesystem : MonoBehaviour
     {
         //heal Tam
         //tamara.Heal();
-        tamaraHP.value += 3f;
         tamAnim.SetTrigger("heal");
         print("tam has been healed");
     }
