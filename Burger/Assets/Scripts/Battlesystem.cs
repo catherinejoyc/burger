@@ -287,7 +287,7 @@ public class Battlesystem : MonoBehaviour
         if (!vikAttackBtn.enabled && !tamAttackBtn.enabled && !dorAttackBtn.enabled)
         {
             //die
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(3);
         }
 
         //player turn

@@ -46,21 +46,22 @@ public class Credits : MonoBehaviour
     }
     public void Download()
     {
-        downloadSlider.SetActive(true);
-        WebClient webClient = new WebClient();
-        webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
-        webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
-        webClient.DownloadFileAsync(new Uri("https://cdn.discordapp.com/attachments/833394647932993537/833395026507202640/Dives_-_Burger_320.mp3"), Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/Dives - Burger.mp3");
+        //downloadSlider.SetActive(true);
+        //WebClient webClient = new WebClient();
+        //webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
+        //webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
+        //webClient.DownloadFileAsync(new Uri("https://cdn.discordapp.com/attachments/833394647932993537/833395026507202640/Dives_-_Burger_320.mp3"), Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/Dives - Burger.mp3");
+        System.Diagnostics.Process.Start("https://cdn.discordapp.com/attachments/833394647932993537/833395026507202640/Dives_-_Burger_320.mp3");
     }
-    private void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
-    {
-        progressBar.value = e.ProgressPercentage;
-    }
+    //private void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+    //{
+    //    progressBar.value = e.ProgressPercentage;
+    //}
 
-    private void Completed(object sender, AsyncCompletedEventArgs e)
-    {
-        savedToText.text = "Download complete! Saved to: " + Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/Dives-Burger.mp3";
-    }
+    //private void Completed(object sender, AsyncCompletedEventArgs e)
+    //{
+    //    savedToText.text = "Download complete! Saved to: " + Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/Dives-Burger.mp3";
+    //}
 
     public void UpdateScore(int time, int score)
     {

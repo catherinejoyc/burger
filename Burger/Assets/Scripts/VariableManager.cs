@@ -26,7 +26,7 @@ public class VariableManager : MonoBehaviour
             GameManager.Instance.EnableCharacter(playerIndex);
             GameManager.Instance.SetVManager(this);
         }
-        if (!gameIsWon && SceneManager.GetActiveScene().buildIndex == 4)
+        if (!gameIsWon && SceneManager.GetActiveScene().buildIndex == 2)
         {
             gameIsWon = true;
             DisplayScore();

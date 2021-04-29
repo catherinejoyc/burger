@@ -59,7 +59,7 @@ public class AudioManager : MonoBehaviour
             PlayOverworldClip();
 
         }
-        else if (SceneManager.GetActiveScene().buildIndex == 5 && !gameOver)
+        else if (SceneManager.GetActiveScene().buildIndex == 3 && !gameOver)
         {
             gameOver = true;
             PlayOverworldClip();

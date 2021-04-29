@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
     public void EndGame()
     {
         vManager.SaveScore(playerTimei, playerScore);
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(2);
     }
 
     //VariableMagician

@@ -37,4 +37,9 @@ public class StartMenu : MonoBehaviour
         startmenu.SetActive(false);
         chooseCharacter.SetActive(true);
     }
+
+    public void ToDIVESWebsite()
+    {
+        System.Diagnostics.Process.Start("https://www.divesmusic.com");
+    }
 }
