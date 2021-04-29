@@ -33621,7 +33621,7 @@ PrefabInstance:
     - target: {fileID: 2634971715329496546, guid: 06c4fa91e555cc241b3c8790a214546d,
         type: 3}
       propertyPath: dialog.Array.data[2]
-      value: Wait - lettuce remain calm!
+      value: Wait - lettuce romaine calm!
       objectReference: {fileID: 0}
     - target: {fileID: 3545286461722974336, guid: 06c4fa91e555cc241b3c8790a214546d,
         type: 3}
