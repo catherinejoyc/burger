@@ -8,7 +8,7 @@ public class ShareTime : MonoBehaviour
     private const string TWITTER_ADDRESS = "http://twitter.com/intent/tweet";
     private const string TWEET_LANGUAGE = "en";
     public static string descriptionParam;
-    private string gameLink = "https://kinayastudios.itch.io/the-legend-of-dives-mortal-burger-kombat?secret=lAJqwpy0SDAHzMQln7FQSVSkFU";
+    private string gameLink = "https://kinayastudios.itch.io/the-legend-of-dives-mortal-burger-kombat";
     private string divesInsta = "https://www.instagram.com/dives_vienna/";
     private string divesFb = "https://www.facebook.com/DIVESvienna";
     public float time = 144f;
