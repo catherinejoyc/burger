@@ -51,7 +51,7 @@ public class Credits : MonoBehaviour
         //webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(Completed);
         //webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged);
         //webClient.DownloadFileAsync(new Uri("https://cdn.discordapp.com/attachments/833394647932993537/833395026507202640/Dives_-_Burger_320.mp3"), Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/Dives - Burger.mp3");
-        System.Diagnostics.Process.Start("https://cdn.discordapp.com/attachments/833394647932993537/833395026507202640/Dives_-_Burger_320.mp3");
+        Application.OpenURL("https://cdn.discordapp.com/attachments/833394647932993537/833395026507202640/Dives_-_Burger_320.mp3");
     }
     //private void ProgressChanged(object sender, DownloadProgressChangedEventArgs e)
     //{
