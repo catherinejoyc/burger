@@ -686,7 +686,7 @@ MonoBehaviour:
 
 
 
-    VIKTORI4'
+    VIKT0RI4'
 --- !u!222 &297131978
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1544,7 +1544,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\n\n\n\n\n\n\n\n\n\n\n DOR4"
+  m_Text: "\n\n\n\n\n\n\n\n\n\n\n D0R4"
 --- !u!222 &947781100
 CanvasRenderer:
   m_ObjectHideFlags: 0
