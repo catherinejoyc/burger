@@ -40,6 +40,6 @@ public class StartMenu : MonoBehaviour
 
     public void ToDIVESWebsite()
     {
-        Application.OpenURL("https://www.divesmusic.com");
+         Application.OpenURL("https://www.divesmusic.com");
     }
 }
