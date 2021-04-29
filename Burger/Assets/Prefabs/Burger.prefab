@@ -195,6 +195,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 7
   currentHP: 7
-  damage: 4
+  damage: 3
   healFactor: 3
   isBurger: 1
