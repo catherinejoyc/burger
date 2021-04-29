@@ -11,13 +11,15 @@ public class EndScreen : MonoBehaviour
 
     private void Start()
     {
-        end.SetActive(false);
-        photo.SetActive(false);
+        end.SetActive(true);
+        photo.SetActive(true);
+        scorescreen.SetActive(true);
+        scorescreen.GetComponent<Canvas>().enabled = false;
     }
     public void CallEnd()
     {
-        photo.SetActive(true);
-        end.SetActive(true);
-        scorescreen.SetActive(false);
+        photo.SetActive(false);
+        end.SetActive(false);
+        scorescreen.GetComponent<Canvas>().enabled = true;
     }
 }
