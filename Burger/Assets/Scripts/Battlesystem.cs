@@ -395,7 +395,7 @@ public class Battlesystem : MonoBehaviour
                 Dialogsystem.instance.Say("Damn. Must be this time of the month...");
                 break;
             case PlayerAttackType.Dor:
-                Dialogsystem.instance.Say("Do I look like a drumset to you???");
+                Dialogsystem.instance.Say("Do I look like a drum set to you???");
                 break;
         }
     }
@@ -437,7 +437,7 @@ public class Battlesystem : MonoBehaviour
         switch (lastPlayerAttack)
         {
             case PlayerAttackType.Vik:
-                Dialogsystem.instance.Say("Your're giving me a headache!");
+                Dialogsystem.instance.Say("You're giving me a headache!");
                 break;
             case PlayerAttackType.Tam:
                 Dialogsystem.instance.Say("Is that a fret?");
@@ -475,7 +475,7 @@ public class Battlesystem : MonoBehaviour
                 Dialogsystem.instance.Say("That really struck a chord.");
                 break;
             case PlayerAttackType.Dor:
-                Dialogsystem.instance.Say("I think your rythm is off.");
+                Dialogsystem.instance.Say("I think your rhythm is off.");
                 break;
         }
     }
