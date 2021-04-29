@@ -8,9 +8,37 @@ using UnityEngine.UI;
 
 public class Credits : MonoBehaviour
 {
+    private static Credits instance;
+    public static Credits Instance
+    {
+        get
+        {
+            return instance;
+        }
+        set
+        {
+            if (instance == null)
+            {
+                instance = value;
+            }
+            else
+            {
+                Debug.LogError("Credits exists already!");
+            }
+        }
+    }
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     public Slider progressBar;
     public Text savedToText;
     public GameObject downloadSlider;
+    public Text timeTxt;
+    public Text scoreTxt;
+    public ShareTime shareTime;
 
     private void Start()
     {
@@ -32,5 +60,13 @@ public class Credits : MonoBehaviour
     private void Completed(object sender, AsyncCompletedEventArgs e)
     {
         savedToText.text = "Download complete! Saved to: " + Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/Dives-Burger.mp3";
+    }
+
+    public void UpdateScore(int time, int score)
+    {
+        timeTxt.text = "Time: " + time.ToString();
+        scoreTxt.text = "Score: " + score.ToString();
+        shareTime.time = time;
+        shareTime.score = score;
     }
 }

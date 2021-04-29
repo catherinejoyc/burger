@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
     public Text timeDisplay;
     public Text scoreDisplay;
 
+
+    VariableManager vManager;
+
     private static GameManager instance;
     public static GameManager Instance
     {
@@ -74,6 +77,7 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
+        vManager.SaveScore(playerTimei, playerScore);
         SceneManager.LoadScene(4);
     }
 
@@ -96,5 +100,10 @@ public class GameManager : MonoBehaviour
                 doraPref.SetActive(true);
                 break;
         }
+    }
+
+    public void SetVManager(VariableManager vM)
+    {
+        vManager = vM;
     }
 }

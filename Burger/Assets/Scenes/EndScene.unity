@@ -912,8 +912,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 91, y: 73}
-  m_SizeDelta: {x: 180.3, y: 30}
+  m_AnchoredPosition: {x: 0, y: 48}
+  m_SizeDelta: {x: 762.68, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &890797318
 MonoBehaviour:
@@ -942,7 +942,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1693,8 +1693,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -183, y: 73}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: 111}
+  m_SizeDelta: {x: 760.7, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1563341987
 MonoBehaviour:
@@ -1723,7 +1723,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2184,6 +2184,9 @@ MonoBehaviour:
   progressBar: {fileID: 729448046}
   savedToText: {fileID: 700648459}
   downloadSlider: {fileID: 729448044}
+  timeTxt: {fileID: 1563341987}
+  scoreTxt: {fileID: 890797318}
+  shareTime: {fileID: 1757644153}
 --- !u!4 &1772530138
 Transform:
   m_ObjectHideFlags: 0

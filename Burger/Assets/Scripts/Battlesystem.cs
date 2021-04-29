@@ -52,6 +52,7 @@ public class Battlesystem : MonoBehaviour
 
     bool isSettingUp = false;
 
+
     public void SetUp(Unit en, GameObject enemyUIPref)
     {
         if (isSettingUp)
